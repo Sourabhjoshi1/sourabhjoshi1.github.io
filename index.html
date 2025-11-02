@@ -3,24 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sourabh K. Joshi — Portfolio</title>
-  <meta name="description" content="Electrical Engineer | Power Electronics | Data Science | Chess Enthusiast" />
+  <title>Sourabh K. Joshi | Power Electronics & Data Science Engineer Portfolio</title>
+  <meta name="description" content="Electrical Engineer | Power Electronics | Data Science | Chess Enthusiast showcasing work in intelligent energy systems." />
   <link rel="icon" href="/favicon.ico" />
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500">
 
-  <!-- ===== LOADING SPINNER ===== -->
   <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50">
     <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin"></div>
   </div>
 
-  <!-- ===== NAVBAR ===== -->
   <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
       <a href="#hero" class="flex items-center gap-3">
@@ -42,14 +38,12 @@
       </div>
 
       <div class="flex items-center gap-3">
-        <!-- Resume Button -->
         <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
            target="_blank"
            class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold shadow hover:scale-105 transition">
           View Resume
         </a>
 
-        <!-- Theme Toggle -->
         <button id="theme-toggle"
                 class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition"
                 aria-label="Toggle dark mode">🌙</button>
@@ -57,140 +51,186 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
   <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-gray-900 to-gray-800 pt-24">
-    <h2 data-aos="zoom-in" class="text-5xl font-extrabold mb-4">Hi, I’m Sourabh 👋</h2>
-    <p data-aos="fade-up" class="text-lg text-gray-300 max-w-2xl">
+    <h1 data-aos="zoom-in" class="text-5xl font-extrabold mb-4">Hi, I’m Sourabh 👋</h1>
+    <p data-aos="fade-up" class="text-xl text-gray-300 max-w-2xl">
       Electrical Engineer • Power Electronics • Data Science • Chess Enthusiast
     </p>
     <div class="mt-8 flex gap-4">
-      <a href="#work" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition">View My Work</a>
-      <a href="#contact" class="px-6 py-3 border border-gray-600 rounded-lg hover:border-blue-400 transition">Contact Me</a>
+      <a href="#work" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-semibold">View My Work</a>
+      <a href="#contact" class="px-6 py-3 border border-gray-600 rounded-lg hover:border-blue-400 transition font-semibold">Contact Me</a>
     </div>
 
-    <div class="mt-8 flex gap-4 items-center">
+    <div class="mt-12 flex gap-8 items-center flex-wrap justify-center">
       <img src="https://github-readme-stats.vercel.app/api?username=Sourabhjoshi1&show_icons=true&hide_border=true&theme=tokyonight"
-           alt="GitHub stats" class="rounded-lg shadow-md w-52" loading="lazy" />
-      <a href="https://www.chess.com/" target="_blank" class="text-gray-300 hover:text-blue-400">♟ Chess Profile</a>
+           alt="GitHub stats for Sourabhjoshi1" class="rounded-lg shadow-md w-64 md:w-auto" loading="lazy" />
+      <a href="https://www.chess.com/" target="_blank" class="text-gray-300 hover:text-blue-400 text-lg font-medium flex items-center gap-2">
+        ♟ Chess Profile (External)
+      </a>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
   <section id="about" class="py-20 max-w-4xl mx-auto px-6">
     <h3 class="text-3xl font-bold mb-6" data-aos="fade-right">About Me</h3>
-    <p class="text-gray-300 leading-relaxed mb-6" data-aos="fade-up">
-      I’m passionate about innovating at the intersection of power electronics and data science. My goal is to design intelligent, efficient energy systems for a sustainable future.
+    <p class="text-gray-300 leading-relaxed mb-6 text-lg" data-aos="fade-up">
+      I’m passionate about innovating at the intersection of **power electronics and data science**. My goal is to design intelligent, efficient energy systems for a sustainable future.
     </p>
-    <p class="text-gray-400" data-aos="fade-up" data-aos-delay="150">
-      Beyond engineering, I coach chess and founded <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline">ChessDepth.in</a>.
-      I enjoy building projects, publishing research, and teaching.
+    <p class="text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="150">
+      Beyond engineering, I coach chess and founded <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium">ChessDepth.in</a>. I enjoy building projects, publishing research, and teaching.
     </p>
+    <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
+           target="_blank"
+           class="text-lg text-blue-400 hover:text-blue-300 border-b border-blue-400 hover:border-blue-300 transition font-medium">
+           → Download Detailed Resume (PDF)
+        </a>
+    </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
   <section id="skills" class="py-16 bg-gray-800 px-6">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Skills</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div data-aos="zoom-in" class="p-4 bg-gray-900 rounded shadow">⚡ Power Electronics</div>
-        <div data-aos="zoom-in" data-aos-delay="100" class="p-4 bg-gray-900 rounded shadow">🔋 Battery Systems</div>
-        <div data-aos="zoom-in" data-aos-delay="200" class="p-4 bg-gray-900 rounded shadow">🤖 Machine Learning</div>
-        <div data-aos="zoom-in" data-aos-delay="300" class="p-4 bg-gray-900 rounded shadow">📊 Data Analysis</div>
-      </div>
+      <h3 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Core Competencies</h3>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <li data-aos="zoom-in" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-blue-500">
+            <div class="text-3xl mb-2">⚡</div>
+            <p class="font-semibold">Power Electronics</p>
+            <p class="text-xs text-gray-400 mt-1">Converters, Inverters, Control Systems</p>
+        </li>
+        <li data-aos="zoom-in" data-aos-delay="100" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-green-500">
+            <div class="text-3xl mb-2">🔋</div>
+            <p class="font-semibold">Battery Systems</p>
+            <p class="text-xs text-gray-400 mt-1">BMS, SOC/SOH Estimation</p>
+        </li>
+        <li data-aos="zoom-in" data-aos-delay="200" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-purple-500">
+            <div class="text-3xl mb-2">🤖</div>
+            <p class="font-semibold">Machine Learning</p>
+            <p class="text-xs text-gray-400 mt-1">Deep Learning, Metaheuristics</p>
+        </li>
+        <li data-aos="zoom-in" data-aos-delay="300" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-yellow-500">
+            <div class="text-3xl mb-2">📊</div>
+            <p class="font-semibold">Data Analysis</p>
+            <p class="text-xs text-gray-400 mt-1">Python, Signal Processing</p>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
   <section id="work" class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Projects</h3>
+      <h3 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Selected Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow hover:scale-105 transition-transform">
-          <h4 class="text-xl font-semibold mb-2">🔋 High-Efficiency Converters</h4>
-          <p class="text-gray-400 text-sm">Designed bidirectional DC-DC converters for renewable energy and battery systems.</p>
+        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700">
+          <div>
+            <h4 class="text-xl font-semibold mb-2 text-blue-400">High-Efficiency Converters</h4>
+            <p class="text-gray-400 text-base mb-4">Designed and simulated **bidirectional DC-DC converters** focusing on high efficiency for grid integration and battery storage systems.</p>
+          </div>
+          <a href="#" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded-md text-center hover:bg-blue-700 transition mt-2">Explore (Simulations/Paper)</a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow hover:scale-105 transition-transform">
-          <h4 class="text-xl font-semibold mb-2">🤖 AI in Energy Systems</h4>
-          <p class="text-gray-400 text-sm">Built AI-driven models for sustainable energy forecasting and intelligent battery health management to enhance efficiency and lifespan..</p>
+        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700">
+          <div>
+            <h4 class="text-xl font-semibold mb-2 text-purple-400">AI in Energy Systems</h4>
+            <p class="text-gray-400 text-base mb-4">Built **AI-driven models** for sustainable energy forecasting and intelligent battery health management to enhance overall system efficiency and lifespan.</p>
+          </div>
+          <a href="#" target="_blank" class="text-sm text-white bg-purple-600 px-4 py-2 rounded-md text-center hover:bg-purple-700 transition mt-2">View Code/Model (GitHub)</a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="p-6 bg-gray-800 rounded-lg shadow hover:scale-105 transition-transform">
-          <h4 class="text-xl font-semibold mb-2">♟ ChessDepth Academy</h4>
-          <p class="text-gray-400 text-sm">Founded <span class="text-blue-400">ChessDepth.in</span>, coaching beginner to intermediate chess learners worldwide.</p>
+        <div data-aos="fade-up" data-aos-delay="200" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700">
+          <div>
+            <h4 class="text-xl font-semibold mb-2 text-yellow-400">ChessDepth Academy</h4>
+            <p class="text-gray-400 text-base mb-4">Founded **ChessDepth.in**, a platform dedicated to coaching beginner to intermediate **chess learners** worldwide using structured curricula.</p>
+          </div>
+          <a href="https://chessdepth.in" target="_blank" class="text-sm text-white bg-yellow-600 px-4 py-2 rounded-md text-center hover:bg-yellow-700 transition mt-2">Visit Website</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== RESEARCH ===== -->
   <section id="research" class="py-20 bg-gray-900 px-6">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Research & Publications</h3>
+      <h3 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Research & Publications</h3>
       <div class="grid md:grid-cols-2 gap-6">
-        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow">
-          <h4 class="text-xl font-semibold text-blue-400">AI-Based State-of-Charge & State-of-Health Estimation for Li-ion Batteries</h4>
-          <p class="text-gray-400 mt-2">Combines deep learning with Bio-Inspired Algorithms for robust SOC & SOH estimation. <a href="#" class="text-blue-400 hover:underline">Preprint</a></p>
+        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+          <h4 class="text-xl font-semibold text-blue-400 mb-2">AI-Based SOC & SOH Estimation for Li-ion Batteries</h4>
+          <p class="text-gray-400 mt-2 mb-3">Combines deep learning with Bio-Inspired Algorithms for robust **State-of-Charge (SOC) & State-of-Health (SOH) estimation**.</p>
+          <a href="/path/to/battery_paper.pdf" target="_blank" class="text-sm text-blue-400 hover:underline">Read Preprint →</a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow">
-          <h4 class="text-xl font-semibold text-blue-400">Dog-Inspired Gradual Exploration Algorithm (DiGEA)</h4>
-          <p class="text-gray-400 mt-2">Novel metaheuristic inspired by canine exploration. <a href="#" class="text-blue-400 hover:underline">Repository</a></p>
+        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
+          <h4 class="text-xl font-semibold text-blue-400 mb-2">Dog-Inspired Gradual Exploration Algorithm (DiGEA)</h4>
+          <p class="text-gray-400 mt-2 mb-3">Novel **metaheuristic optimization algorithm** inspired by canine exploration patterns for solving complex engineering problems.</p>
+          <a href="https://github.com/Sourabhjoshi1/DiGEA" target="_blank" class="text-sm text-blue-400 hover:underline">View Repository →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
   <section id="contact" class="py-20 text-center px-6">
     <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Get in Touch</h3>
-    <p class="text-gray-300 mb-8" data-aos="fade-up">Let’s collaborate on research, projects, or chess training!</p>
+    <p class="text-gray-300 mb-8 text-lg" data-aos="fade-up">Let’s collaborate on research, projects, or chess training!</p>
 
-    <div class="space-y-3 mb-8" data-aos="fade-up">
-      <p>📧 <a href="mailto:joshisourabh47@gmail.com" class="text-blue-400 hover:underline">joshisourabh47@gmail.com</a></p>
-      <p>🔗 <a href="https://linkedin.com/in/sourabhk_nitb" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a></p>
-      <p>🐙 <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-blue-400 hover:underline">GitHub</a></p>
+    <div class="space-y-4 mb-10 text-lg" data-aos="fade-up">
+      <p class="flex justify-center items-center gap-2">
+        📧 <a href="mailto:joshisourabh47@gmail.com" class="text-blue-400 hover:underline">joshisourabh47@gmail.com</a>
+      </p>
+      <p class="flex justify-center items-center gap-2">
+        🔗 <a href="https://linkedin.com/in/sourabhk_nitb" target="_blank" class="text-blue-400 hover:underline">LinkedIn Profile</a>
+      </p>
+      <p class="flex justify-center items-center gap-2">
+        🐙 <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-blue-400 hover:underline">GitHub Profile</a>
+      </p>
     </div>
 
-    <p class="italic text-gray-400">“Code clean. Lift heavy. Think deeply.” 💡🏋️‍♂️♟</p>
+    <p class="italic text-gray-400 text-xl font-serif">“Code clean. Lift heavy. Think deeply.” 💡🏋️‍♂️♟</p>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="py-8 bg-gray-800 text-center text-gray-400">
     <p>© <span id="year"></span> <span class="font-semibold text-white">Sourabh K. Joshi</span> • Built with ❤️ using <span class="text-blue-400">Tailwind CSS</span></p>
   </footer>
 
-  <!-- ===== BACK TO TOP ===== -->
-  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg hover:bg-blue-700" aria-label="Back to top">↑</button>
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
 
-  <!-- ===== SCRIPTS ===== -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Loading spinner
+    // Loading spinner - Removed arbitrary timeout, relying on 'load' event completion.
     window.addEventListener('load', () => {
-      setTimeout(() => document.getElementById('loading').style.display = 'none', 500);
+      document.getElementById('loading').style.display = 'none';
     });
 
     // Theme toggle
     const toggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
+    
+    function updateThemeIcon(isDark) {
+        if (isDark) {
+            toggle.textContent = '☀️'; // Sun for Light Mode
+            toggle.setAttribute('aria-label', 'Toggle light mode');
+        } else {
+            toggle.textContent = '🌙'; // Moon for Dark Mode
+            toggle.setAttribute('aria-label', 'Toggle dark mode');
+        }
+    }
+
     function setTheme(dark) {
       if (dark) {
         html.classList.add('dark');
         document.body.classList.add('bg-gray-900', 'text-white');
-        toggle.textContent = '☀️';
         localStorage.setItem('theme', 'dark');
       } else {
         html.classList.remove('dark');
         document.body.classList.remove('bg-gray-900', 'text-white');
-        toggle.textContent = '🌙';
         localStorage.setItem('theme', 'light');
       }
+      updateThemeIcon(dark);
     }
+
     const saved = localStorage.getItem('theme');
-    setTheme(saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches));
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(saved === 'dark' || (!saved && prefersDark));
+    
     toggle.onclick = () => setTheme(!html.classList.contains('dark'));
 
     // Back to top
     const topBtn = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
+      // Show button when scrolled more than 300px down
       topBtn.classList.toggle('hidden', window.scrollY < 300);
     });
     topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
