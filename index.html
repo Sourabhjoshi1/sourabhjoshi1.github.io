@@ -7,109 +7,115 @@
   <meta name="description" content="Electrical Engineer | Power Electronics | Data Science | Chess Enthusiast showcasing work in intelligent energy systems." />
   <link rel="icon" href="/favicon.ico" />
 
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // Enable class-based dark mode
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500">
+<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-100 dark:text-gray-900">
 
-  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50">
-    <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin"></div>
+  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-100">
+    <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin dark:border-gray-300 dark:border-t-blue-500"></div>
   </div>
 
-  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50">
+  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-100/80 dark:shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
       <a href="#hero" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
           SJ
         </div>
         <div>
-          <h1 class="font-semibold text-lg">Sourabh K. Joshi</h1>
-          <p class="text-xs text-gray-400">Electrical Engineer • Power Electronics</p>
+          <h1 class="font-semibold text-lg dark:text-gray-900">Sourabh K. Joshi</h1>
+          <p class="text-xs text-gray-400 dark:text-gray-600">Electrical Engineer • Power Electronics</p>
         </div>
       </a>
 
-      <div class="hidden md:flex space-x-6 text-gray-300">
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#skills" class="hover:text-white transition">Skills</a>
-        <a href="#work" class="hover:text-white transition">Work</a>
-        <a href="#research" class="hover:text-white transition">Research</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
+      <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
+        <a href="#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
+        <a href="#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
+        <a href="#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
+        <a href="#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
+        <a href="#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
       </div>
 
       <div class="flex items-center gap-3">
         <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
            target="_blank"
-           class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold shadow hover:scale-105 transition">
-          View Resume
+           class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold shadow hover:bg-blue-700 transition"
+           title="View Resume">
+          📄
         </a>
 
         <button id="theme-toggle"
-                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-200 dark:hover:bg-gray-300 dark:text-gray-900"
                 aria-label="Toggle dark mode">🌙</button>
       </div>
     </div>
   </nav>
 
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-gray-900 to-gray-800 pt-24">
-    <h1 data-aos="zoom-in" class="text-5xl font-extrabold mb-4">Hi, I’m Sourabh 👋</h1>
-    <p data-aos="fade-up" class="text-xl text-gray-300 max-w-2xl">
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-gray-900 to-gray-800 pt-24 dark:from-gray-100 dark:to-gray-200">
+    <h1 data-aos="zoom-in" class="text-5xl font-extrabold mb-4 dark:text-gray-900">Hi, I’m Sourabh 👋</h1>
+    <p data-aos="fade-up" class="text-xl text-gray-300 max-w-2xl dark:text-gray-700">
       Electrical Engineer • Power Electronics • Data Science • Chess Enthusiast
     </p>
     <div class="mt-8 flex gap-4">
-      <a href="#work" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-semibold">View My Work</a>
-      <a href="#contact" class="px-6 py-3 border border-gray-600 rounded-lg hover:border-blue-400 transition font-semibold">Contact Me</a>
+      <a href="#work" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-semibold text-white">View My Work</a>
+      <a href="#contact" class="px-6 py-3 border border-gray-600 rounded-lg hover:border-blue-400 transition font-semibold dark:border-gray-400 dark:hover:border-blue-600 dark:text-gray-900">Contact Me</a>
     </div>
 
     <div class="mt-12 flex gap-8 items-center flex-wrap justify-center">
       <img src="https://github-readme-stats.vercel.app/api?username=Sourabhjoshi1&show_icons=true&hide_border=true&theme=tokyonight"
            alt="GitHub stats for Sourabhjoshi1" class="rounded-lg shadow-md w-64 md:w-auto" loading="lazy" />
-      <a href="https://www.chess.com/" target="_blank" class="text-gray-300 hover:text-blue-400 text-lg font-medium flex items-center gap-2">
+      <a href="https://www.chess.com/memeber/sourabhjoshi01" target="_blank" class="text-gray-300 hover:text-blue-400 text-lg font-medium flex items-center gap-2 dark:text-gray-700 dark:hover:text-blue-600">
         ♟ Chess Profile (External)
       </a>
     </div>
   </section>
 
   <section id="about" class="py-20 max-w-4xl mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-6" data-aos="fade-right">About Me</h3>
-    <p class="text-gray-300 leading-relaxed mb-6 text-lg" data-aos="fade-up">
-      I’m passionate about innovating at the intersection of **power electronics and data science**. My goal is to design intelligent, efficient energy systems for a sustainable future.
+    <h3 class="text-3xl font-bold mb-6 dark:text-gray-900" data-aos="fade-right">About Me</h3>
+    <p class="text-gray-300 leading-relaxed mb-6 text-lg dark:text-gray-700" data-aos="fade-up">
+      I’m passionate about innovating at the intersection of Power Electronics & Data Science. My goal is to design intelligent, efficient energy systems for a sustainable future.
     </p>
-    <p class="text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="150">
-      Beyond engineering, I coach chess and founded <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium">ChessDepth.in</a>. I enjoy building projects, publishing research, and teaching.
+    <p class="text-gray-400 text-lg dark:text-gray-600" data-aos="fade-up" data-aos-delay="150">
+      Beyond engineering, I coach chess and founded <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium dark:text-blue-600 dark:hover:text-blue-500">ChessDepth.in</a>. I enjoy building projects, publishing research, and teaching.
     </p>
     <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
         <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
            target="_blank"
-           class="text-lg text-blue-400 hover:text-blue-300 border-b border-blue-400 hover:border-blue-300 transition font-medium">
+           class="text-lg text-blue-400 hover:text-blue-300 border-b border-blue-400 hover:border-blue-300 transition font-medium dark:text-blue-600 dark:border-blue-600 dark:hover:text-blue-500">
            → Download Detailed Resume (PDF)
         </a>
     </div>
   </section>
 
-  <section id="skills" class="py-16 bg-gray-800 px-6">
+  <section id="skills" class="py-16 bg-gray-800 px-6 dark:bg-gray-200">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Core Competencies</h3>
+      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Core Competencies</h3>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <li data-aos="zoom-in" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-blue-500">
+        <li data-aos="zoom-in" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-blue-500 dark:bg-white dark:text-gray-900">
             <div class="text-3xl mb-2">⚡</div>
             <p class="font-semibold">Power Electronics</p>
-            <p class="text-xs text-gray-400 mt-1">Converters, Inverters, Control Systems</p>
+            <p class="text-xs text-gray-400 mt-1 dark:text-gray-600">Converters, Inverters, Control Systems</p>
         </li>
-        <li data-aos="zoom-in" data-aos-delay="100" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-green-500">
+        <li data-aos="zoom-in" data-aos-delay="100" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-green-500 dark:bg-white dark:text-gray-900">
             <div class="text-3xl mb-2">🔋</div>
             <p class="font-semibold">Battery Systems</p>
-            <p class="text-xs text-gray-400 mt-1">BMS, SOC/SOH Estimation</p>
+            <p class="text-xs text-gray-400 mt-1 dark:text-gray-600">BMS, SOC/SOH Estimation</p>
         </li>
-        <li data-aos="zoom-in" data-aos-delay="200" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-purple-500">
+        <li data-aos="zoom-in" data-aos-delay="200" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-purple-500 dark:bg-white dark:text-gray-900">
             <div class="text-3xl mb-2">🤖</div>
             <p class="font-semibold">Machine Learning</p>
-            <p class="text-xs text-gray-400 mt-1">Deep Learning, Metaheuristics</p>
+            <p class="text-xs text-gray-400 mt-1 dark:text-gray-600">Deep Learning, Metaheuristics</p>
         </li>
-        <li data-aos="zoom-in" data-aos-delay="300" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-yellow-500">
+        <li data-aos="zoom-in" data-aos-delay="300" class="p-5 bg-gray-900 rounded-lg shadow-xl border-t-4 border-yellow-500 dark:bg-white dark:text-gray-900">
             <div class="text-3xl mb-2">📊</div>
             <p class="font-semibold">Data Analysis</p>
-            <p class="text-xs text-gray-400 mt-1">Python, Signal Processing</p>
+            <p class="text-xs text-gray-400 mt-1 dark:text-gray-600">Python, Signal Processing</p>
         </li>
       </ul>
     </div>
@@ -117,26 +123,26 @@
 
   <section id="work" class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Selected Projects</h3>
+      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Selected Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700">
+        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
           <div>
-            <h4 class="text-xl font-semibold mb-2 text-blue-400">High-Efficiency Converters</h4>
-            <p class="text-gray-400 text-base mb-4">Designed and simulated **bidirectional DC-DC converters** focusing on high efficiency for grid integration and battery storage systems.</p>
+            <h4 class="text-xl font-semibold mb-2 text-blue-400 dark:text-blue-600">High-Efficiency Converters</h4>
+            <p class="text-gray-400 text-base mb-4 dark:text-gray-700">Designed and simulated Bidirectional DC-DC converters - focusing on high efficiency for grid integration and battery storage systems.</p>
           </div>
           <a href="#" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded-md text-center hover:bg-blue-700 transition mt-2">Explore (Simulations/Paper)</a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700">
+        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
           <div>
-            <h4 class="text-xl font-semibold mb-2 text-purple-400">AI in Energy Systems</h4>
-            <p class="text-gray-400 text-base mb-4">Built **AI-driven models** for sustainable energy forecasting and intelligent battery health management to enhance overall system efficiency and lifespan.</p>
+            <h4 class="text-xl font-semibold mb-2 text-purple-400 dark:text-purple-600">AI in Energy Systems</h4>
+            <p class="text-gray-400 text-base mb-4 dark:text-gray-700">Built **AI-driven models** for sustainable energy forecasting and intelligent battery health management to enhance overall system efficiency and lifespan.</p>
           </div>
           <a href="#" target="_blank" class="text-sm text-white bg-purple-600 px-4 py-2 rounded-md text-center hover:bg-purple-700 transition mt-2">View Code/Model (GitHub)</a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700">
+        <div data-aos="fade-up" data-aos-delay="200" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
           <div>
-            <h4 class="text-xl font-semibold mb-2 text-yellow-400">ChessDepth Academy</h4>
-            <p class="text-gray-400 text-base mb-4">Founded **ChessDepth.in**, a platform dedicated to coaching beginner to intermediate **chess learners** worldwide using structured curricula.</p>
+            <h4 class="text-xl font-semibold mb-2 text-yellow-400 dark:text-yellow-600">ChessDepth Academy</h4>
+            <p class="text-gray-400 text-base mb-4 dark:text-gray-700">Founded ChessDepth.in, a platform dedicated to coaching beginner to intermediate chess learners worldwide using structured curriculam.</p>
           </div>
           <a href="https://chessdepth.in" target="_blank" class="text-sm text-white bg-yellow-600 px-4 py-2 rounded-md text-center hover:bg-yellow-700 transition mt-2">Visit Website</a>
         </div>
@@ -144,52 +150,52 @@
     </div>
   </section>
 
-  <section id="research" class="py-20 bg-gray-900 px-6">
+  <section id="research" class="py-20 bg-gray-900 px-6 dark:bg-gray-100">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Research & Publications</h3>
+      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Research & Publications</h3>
       <div class="grid md:grid-cols-2 gap-6">
-        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
-          <h4 class="text-xl font-semibold text-blue-400 mb-2">AI-Based SOC & SOH Estimation for Li-ion Batteries</h4>
-          <p class="text-gray-400 mt-2 mb-3">Combines deep learning with Bio-Inspired Algorithms for robust **State-of-Charge (SOC) & State-of-Health (SOH) estimation**.</p>
-          <a href="/path/to/battery_paper.pdf" target="_blank" class="text-sm text-blue-400 hover:underline">Read Preprint →</a>
+        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 dark:bg-white dark:border-gray-300">
+          <h4 class="text-xl font-semibold text-blue-400 mb-2 dark:text-blue-600">AI-Based SOC & SOH Estimation for Li-ion Batteries</h4>
+          <p class="text-gray-400 mt-2 mb-3 dark:text-gray-700">Combines deep learning with Bio-Inspired Algorithms for robust **State-of-Charge (SOC) & State-of-Health (SOH) estimation**.</p>
+          <a href="/path/to/battery_paper.pdf" target="_blank" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">Read Preprint →</a>
         </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
-          <h4 class="text-xl font-semibold text-blue-400 mb-2">Dog-Inspired Gradual Exploration Algorithm (DiGEA)</h4>
-          <p class="text-gray-400 mt-2 mb-3">Novel **metaheuristic optimization algorithm** inspired by canine exploration patterns for solving complex engineering problems.</p>
-          <a href="https://github.com/Sourabhjoshi1/DiGEA" target="_blank" class="text-sm text-blue-400 hover:underline">View Repository →</a>
+        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 dark:bg-white dark:border-gray-300">
+          <h4 class="text-xl font-semibold text-blue-400 mb-2 dark:text-blue-600">Dog-Inspired Gradual Exploration Algorithm (DiGEA)</h4>
+          <p class="text-gray-400 mt-2 mb-3 dark:text-gray-700">Novel **metaheuristic optimization algorithm** inspired by canine exploration patterns for solving complex engineering problems.</p>
+          <a href="https://github.com/Sourabhjoshi1/DiGEA" target="_blank" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">View Repository →</a>
         </div>
       </div>
     </div>
   </section>
 
   <section id="contact" class="py-20 text-center px-6">
-    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Get in Touch</h3>
-    <p class="text-gray-300 mb-8 text-lg" data-aos="fade-up">Let’s collaborate on research, projects, or chess training!</p>
+    <h3 class="text-3xl font-bold mb-6 dark:text-gray-900" data-aos="fade-up">Get in Touch</h3>
+    <p class="text-gray-300 mb-8 text-lg dark:text-gray-700" data-aos="fade-up">Let’s collaborate on research, projects, or chess training!</p>
 
     <div class="space-y-4 mb-10 text-lg" data-aos="fade-up">
-      <p class="flex justify-center items-center gap-2">
-        📧 <a href="mailto:joshisourabh47@gmail.com" class="text-blue-400 hover:underline">joshisourabh47@gmail.com</a>
+      <p class="flex justify-center items-center gap-2 dark:text-gray-900">
+        📧 <a href="mailto:joshisourabh47@gmail.com" class="text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">joshisourabh47@gmail.com</a>
       </p>
-      <p class="flex justify-center items-center gap-2">
-        🔗 <a href="https://linkedin.com/in/sourabhk_nitb" target="_blank" class="text-blue-400 hover:underline">LinkedIn Profile</a>
+      <p class="flex justify-center items-center gap-2 dark:text-gray-900">
+        🔗 <a href="https://linkedin.com/in/sourabhk_nitb" target="_blank" class="text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">LinkedIn Profile</a>
       </p>
-      <p class="flex justify-center items-center gap-2">
-        🐙 <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-blue-400 hover:underline">GitHub Profile</a>
+      <p class="flex justify-center items-center gap-2 dark:text-gray-900">
+        🐙 <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">GitHub Profile</a>
       </p>
     </div>
 
-    <p class="italic text-gray-400 text-xl font-serif">“Code clean. Lift heavy. Think deeply.” 💡🏋️‍♂️♟</p>
+    <p class="italic text-gray-400 text-xl font-serif dark:text-gray-600">“Code clean. Lift heavy. Think deeply.” 💡🏋️‍♂️♟</p>
   </section>
 
-  <footer class="py-8 bg-gray-800 text-center text-gray-400">
-    <p>© <span id="year"></span> <span class="font-semibold text-white">Sourabh K. Joshi</span> • Built with ❤️ using <span class="text-blue-400">Tailwind CSS</span></p>
+  <footer class="py-8 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+    <p>© <span id="year"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> • Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span></p>
   </footer>
 
   <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Loading spinner - Removed arbitrary timeout, relying on 'load' event completion.
+    // Loading spinner
     window.addEventListener('load', () => {
       document.getElementById('loading').style.display = 'none';
     });
@@ -208,14 +214,13 @@
         }
     }
 
+    // FIX: Simplified the setTheme function to only add/remove the 'dark' class on <html>
     function setTheme(dark) {
       if (dark) {
         html.classList.add('dark');
-        document.body.classList.add('bg-gray-900', 'text-white');
         localStorage.setItem('theme', 'dark');
       } else {
         html.classList.remove('dark');
-        document.body.classList.remove('bg-gray-900', 'text-white');
         localStorage.setItem('theme', 'light');
       }
       updateThemeIcon(dark);
@@ -223,14 +228,24 @@
 
     const saved = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(saved === 'dark' || (!saved && prefersDark));
+    
+    // Default to dark mode unless user has a light preference or saved light theme
+    let initialThemeIsDark = saved ? saved === 'dark' : prefersDark;
+
+    // NOTE: Force initial theme to be DARK if no preference is saved (since the original design was dark-first)
+    if (!saved) {
+        initialThemeIsDark = true; 
+    } else {
+        initialThemeIsDark = saved === 'dark';
+    }
+
+    setTheme(initialThemeIsDark);
     
     toggle.onclick = () => setTheme(!html.classList.contains('dark'));
 
     // Back to top
     const topBtn = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
-      // Show button when scrolled more than 300px down
       topBtn.classList.toggle('hidden', window.scrollY < 300);
     });
     topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
