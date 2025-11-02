@@ -17,13 +17,13 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-100 dark:text-gray-900">
+<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
 
-  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-100">
-    <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin dark:border-gray-300 dark:border-t-blue-500"></div>
+  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-200">
+    <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin dark:border-gray-400 dark:border-t-blue-500"></div>
   </div>
 
-  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-100/80 dark:shadow-md">
+  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
       <a href="#hero" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
@@ -52,13 +52,13 @@
         </a>
 
         <button id="theme-toggle"
-                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-200 dark:hover:bg-gray-300 dark:text-gray-900"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
                 aria-label="Toggle dark mode">🌙</button>
       </div>
     </div>
   </nav>
 
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-gray-900 to-gray-800 pt-24 dark:from-gray-100 dark:to-gray-200">
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-gray-900 to-gray-800 pt-24 dark:from-gray-200 dark:to-gray-300">
     <h1 data-aos="zoom-in" class="text-5xl font-extrabold mb-4 dark:text-gray-900">Hi, I’m Sourabh 👋</h1>
     <p data-aos="fade-up" class="text-xl text-gray-300 max-w-2xl dark:text-gray-700">
       Electrical Engineer • Power Electronics • Data Science • Chess Enthusiast
@@ -94,7 +94,7 @@
     </div>
   </section>
 
-  <section id="skills" class="py-16 bg-gray-800 px-6 dark:bg-gray-200">
+  <section id="skills" class="py-16 bg-gray-800 px-6 dark:bg-gray-300">
     <div class="max-w-6xl mx-auto">
       <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Core Competencies</h3>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -122,7 +122,7 @@
     </div>
   </section>
 
-  <section id="work" class="py-20 px-6">
+  <section id="work" class="py-20 px-6 dark:bg-gray-200">
     <div class="max-w-6xl mx-auto">
       <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Selected Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
@@ -151,7 +151,7 @@
     </div>
   </section>
 
-  <section id="research" class="py-20 bg-gray-900 px-6 dark:bg-gray-100">
+  <section id="research" class="py-20 bg-gray-900 px-6 dark:bg-gray-200">
     <div class="max-w-6xl mx-auto">
       <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Research & Publications</h3>
       <div class="grid md:grid-cols-2 gap-6">
@@ -169,7 +169,7 @@
     </div>
   </section>
 
-  <section id="contact" class="py-20 text-center px-6">
+  <section id="contact" class="py-20 text-center px-6 dark:bg-gray-200">
     <h3 class="text-3xl font-bold mb-6 dark:text-gray-900" data-aos="fade-up">Get in Touch</h3>
     <p class="text-gray-300 mb-8 text-lg dark:text-gray-700" data-aos="fade-up">Let’s collaborate on research, projects, or chess training!</p>
 
@@ -217,7 +217,6 @@
         }
     }
 
-    // FIX: Simplified the setTheme function to only add/remove the 'dark' class on <html>
     function setTheme(dark) {
       if (dark) {
         html.classList.add('dark');
@@ -232,7 +231,7 @@
     const saved = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // FIX: Ensures the default theme is correctly set on load
+    // Ensures the default theme is correctly set on load
     let initialThemeIsDark;
     if (saved) {
         initialThemeIsDark = saved === 'dark';
