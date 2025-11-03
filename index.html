@@ -1,319 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sourabh K. Joshi | Power Electronics & Data Science Engineer Portfolio</title>
-  <meta name="description" content="Electrical Engineer | Power Electronics | Data Science | Chess Enthusiast showcasing work in intelligent energy systems." />
-  
-  <link rel="icon" href="https://github.com/Sourabhjoshi1/sourabhjoshi1.github.io/blob/main/favicon/android-chrome-192x192.png?raw=true" type="image/png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sourabh K. Joshi | Power Electronics & Data Science Engineer</title>
+  <meta name="description" content="Sourabh K. Joshi — Electrical Engineer (Power Electronics), Data Science, and Chess coach. Projects, research, and contact." />
+  <link rel="canonical" href="https://yourdomain.example/" />
 
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sourabh K. Joshi — Power Electronics & Data Science" />
+  <meta property="og:description" content="Electrical Engineer (Power Electronics) • Data Science • Chess Enthusiast. Projects, research and contact." />
+  <meta property="og:image" content="https://example.com/og-image.png" />
+  <meta property="og:url" content="https://yourdomain.example/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preconnect to resources (helps performance) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://github-readme-stats.vercel.app" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://github.com/Sourabhjoshi1/sourabhjoshi1.github.io/blob/main/favicon/android-chrome-192x192.png?raw=true" type="image/png">
+
+  <!-- Tailwind CDN (OK for prototype; build for production) -->
   <script>
-    tailwind.config = {
-      darkMode: 'class', 
-    }
+    tailwind = { config: { darkMode: 'class' } };
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* small visually-hidden helper for skip link focus */
+    .sr-only-focusable:focus { position: static; width: auto; height: auto; margin: 0.5rem; clip: auto; clip-path: none; }
+    /* spinner colors adapted to theme using CSS variables */
+    :root {
+      --spinner-border: #374151; /* gray-700 */
+      --spinner-top: #3b82f6; /* blue-500 */
+      --bg: #0f172a; /* gray-900 */
+      --text: #fff;
+    }
+    .dark-theme {
+      --spinner-border: #d1d5db; /* gray-300 */
+      --spinner-top: #3b82f6;
+      --bg: #f3f4f6;
+      --text: #111827;
+    }
+    .spinner {
+      width: 3rem;
+      height: 3rem;
+      border-width: 4px;
+      border-style: solid;
+      border-radius: 9999px;
+      border-color: var(--spinner-border);
+      border-top-color: var(--spinner-top);
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+
+  <!-- Structured data (brief) - edit fields as needed -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sourabh K. Joshi",
+    "url": "https://yourdomain.example/",
+    "sameAs": [
+      "https://github.com/Sourabhjoshi1",
+      "https://www.linkedin.com/in/sourabhk-nitb",
+      "https://chess.com/member/sourabhjoshi01"
+    ],
+    "jobTitle": "Electrical Engineer (Power Electronics) / Data Scientist",
+    "description": "Designing intelligent energy systems, battery SOC/SOH research, and building AI models for energy forecasting."
+  }
+  </script>
 </head>
 
-<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
+<body class="bg-gray-900 text-white font-sans transition-colors duration-500" id="page-root">
+  <!-- Skip link for keyboard users -->
+  <a class="sr-only sr-only-focusable p-2 bg-blue-600 text-white rounded-md absolute left-4 top-4 z-50 focus:not-sr-only" href="#main">Skip to content</a>
 
-  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-200">
-    <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin dark:border-gray-400 dark:border-t-blue-500"></div>
+  <!-- Loading overlay -->
+  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50">
+    <div id="spinner" class="spinner" role="status" aria-label="Loading"></div>
   </div>
 
-  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
-      <a href="#hero" class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
-          SJ
-        </div>
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg z-40">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+      <a href="#hero" class="flex items-center gap-3" aria-label="Go to top / hero">
+        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">SJ</div>
         <div>
-          <h1 class="font-semibold text-lg dark:text-gray-900">Sourabh K. Joshi</h1>
-          <p class="text-xs text-gray-400 dark:text-gray-600">Electrical Engineer • Power Electronics</p>
+          <h1 class="font-semibold text-lg">Sourabh K. Joshi</h1>
+          <p class="text-xs text-gray-400">Electrical Engineer • Power Electronics</p>
         </div>
       </a>
 
-      <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
-        <a href="#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
-        <a href="#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
-        <a href="#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
-        <a href="blog.html" class="hover:text-white transition dark:hover:text-gray-900">Blog</a>
-        <a href="#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
-        <a href="#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
+      <!-- Desktop links -->
+      <div class="hidden md:flex space-x-6 text-gray-300">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#work" class="hover:text-white">Work</a>
+        <a href="blog.html" class="hover:text-white">Blog</a>
+        <a href="#research" class="hover:text-white">Research</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
-           target="_blank"
-           class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold shadow hover:bg-blue-700 transition"
-           title="View Resume">
-          📄
-        </a>
+        <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview" target="_blank" rel="noopener noreferrer" title="Resume" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white shadow hover:bg-blue-700">📄</a>
 
-        <button id="theme-toggle"
-                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
-                aria-label="Toggle dark mode">🌙</button>
+        <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" class="md:hidden ml-2 w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="md:hidden bg-gray-900/95 border-t border-gray-800 hidden">
+      <div class="flex flex-col px-4 py-3">
+        <a href="#about" class="py-2">About</a>
+        <a href="#skills" class="py-2">Skills</a>
+        <a href="#work" class="py-2">Work</a>
+        <a href="blog.html" class="py-2">Blog</a>
+        <a href="#research" class="py-2">Research</a>
+        <a href="#contact" class="py-2">Contact</a>
       </div>
     </div>
   </nav>
 
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 
-        bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 
-        pt-24 dark:from-gray-200 dark:to-gray-300">
-    <h1 data-aos="zoom-in" class="text-5xl md:text-6xl font-extrabold mb-4 dark:text-gray-900">Sourabh K. Joshi</h1>
-    <p data-aos="fade-up" class="text-xl md:text-2xl text-gray-300 max-w-2xl dark:text-gray-700">
-      Electrical Engineer (B.Tech NIT Bhopal) • Power Electronics (M.Tech, NIT Nagpur) • Data Science • Chess Enthusiast
-    </p>
-    <div class="mt-8 flex gap-4">
-      <a href="#work" class="px-7 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-semibold text-lg text-white">View My Work</a>
-      <a href="#contact" class="px-7 py-3 border border-gray-600 rounded-lg hover:border-blue-400 transition font-semibold text-lg dark:border-gray-400 dark:hover:border-blue-600 dark:text-gray-900">Contact Me</a>
-    </div>
-
-    <div class="mt-12 flex gap-8 items-center flex-wrap justify-center">
-      <img src="https://github-readme-stats.vercel.app/api?username=Sourabhjoshi1&show_icons=true&hide_border=true&theme=tokyonight"
-           alt="GitHub stats for Sourabhjoshi1" class="rounded-lg shadow-md w-64 md:w-auto" loading="lazy" />
-      <a href="https://www.chess.com/member/sourabhjoshi01" target="_blank" class="text-gray-300 hover:text-blue-400 text-lg font-medium flex items-center gap-2 dark:text-gray-700 dark:hover:text-blue-600">
-        ♟ Chess Profile (External)
-      </a>
-    </div>
-  </section>
-
-  <section id="about" class="py-20 max-w-5xl mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-6 dark:text-gray-900" data-aos="fade-right">About Me / Over Mij</h3>
-    
-    <p class="text-lg text-gray-300 leading-relaxed mb-6 dark:text-gray-700" data-aos="fade-up">
-      I’m passionate about innovating at the intersection of <b>Power Electronics, Energy Storage Systems, and Data Science</b>. My goal is to design intelligent, efficient energy systems for a sustainable future.
-    </p>
-    <p class="text-lg text-gray-400 leading-relaxed mb-6 italic dark:text-gray-600" data-aos="fade-up" data-aos-delay="50">
-      Ik ben gepassioneerd over innovatie op het snijvlak van <b>Vermogenselektronica, Energieopslagsystemen en Datawetenschap</b>. Mijn doel is het ontwerpen van intelligente, efficiënte energiesystemen voor een duurzame toekomst.
-    </p>
-
-    <p class="text-lg text-gray-400 dark:text-gray-600" data-aos="fade-up" data-aos-delay="150">
-      Beyond engineering, I coach chess and founded <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium dark:text-blue-600 dark:hover:text-blue-500">ChessDepth.in</a>. I enjoy building projects, publishing research, and teaching.
-    </p>
-    <p class="text-lg text-gray-400 italic dark:text-gray-600" data-aos="fade-up" data-aos-delay="200">
-      Naast engineering coach ik schaken en richtte ik <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium dark:text-blue-600 dark:hover:text-blue-500">ChessDepth.in</a> op. Ik geniet van het bouwen van projecten, het publiceren van onderzoek en lesgeven.
-    </p>
-    
-    <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
-        <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
-           target="_blank"
-           class="text-lg text-blue-400 hover:text-blue-300 border-b border-blue-400 hover:border-blue-300 transition font-medium dark:text-blue-600 dark:border-blue-600 dark:hover:text-blue-500">
-           → Download Detailed Resume (PDF)
-        </a>
-    </div>
-  </section>
-
-  <section id="skills" class="py-20 bg-gray-800 px-6 dark:bg-gray-300">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Core Competencies</h3>
-      <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <li data-aos="zoom-in" class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-blue-500 dark:bg-white dark:text-gray-900">
-            <div class="text-4xl mb-2">⚡</div>
-            <p class="font-bold text-lg">Power Electronics</p>
-            <p class="text-sm text-gray-400 mt-1 dark:text-gray-600">Converters, Inverters, Control Systems</p>
-        </li>
-        <li data-aos="zoom-in" data-aos-delay="100" class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-green-500 dark:bg-white dark:text-gray-900">
-            <div class="text-4xl mb-2">🔋</div>
-            <p class="font-bold text-lg">Battery Systems</p>
-            <p class="text-sm text-gray-400 mt-1 dark:text-gray-600">BMS, SOC/SOH Estimation</p>
-        </li>
-        <li data-aos="zoom-in" data-aos-delay="200" class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-purple-500 dark:bg-white dark:text-gray-900">
-            <div class="text-4xl mb-2">🤖</div>
-            <p class="font-bold text-lg">Machine Learning</p>
-            <p class="text-sm text-gray-400 mt-1 dark:text-gray-600">Deep Learning, Metaheuristics</p>
-        </li>
-        <li data-aos="zoom-in" data-aos-delay="300" class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-yellow-500 dark:bg-white dark:text-gray-900">
-            <div class="text-4xl mb-2">📊</div>
-            <p class="font-bold text-lg">Data Analysis</p>
-            <p class="text-sm text-gray-400 mt-1 dark:text-gray-600">Python, Signal Processing</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="work" class="py-20 px-6 dark:bg-gray-200">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Selected Projects</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
-          <div>
-            <h4 class="text-xl font-semibold mb-2 text-blue-400 dark:text-blue-600">High-Efficiency Converters</h4>
-            <p class="text-base text-gray-400 mb-4 dark:text-gray-700">Designed and simulated bidirectional DC-DC converters focusing on <b>high efficiency</b> for grid integration and battery storage systems.</p>
-          </div>
-          <a href="#" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded-md text-center hover:bg-blue-700 transition mt-2">Explore (Simulations/Paper)</a>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
-          <div>
-            <h4 class="text-xl font-semibold mb-2 text-purple-400 dark:text-purple-600">AI in Energy Systems</h4>
-            <p class="text-base text-gray-400 mb-4 dark:text-gray-700">Built <b>AI-driven models</b> for sustainable energy forecasting and intelligent battery health management to enhance overall system efficiency and lifespan.</p>
-          </div>
-          <a href="#" target="_blank" class="text-sm text-white bg-purple-600 px-4 py-2 rounded-md text-center hover:bg-purple-700 transition mt-2">View Code/Model (GitHub)</a>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
-          <div>
-            <h4 class="text-xl font-semibold mb-2 text-yellow-400 dark:text-yellow-600">ChessDepth Academy</h4>
-            <p class="text-base text-gray-400 mb-4 dark:text-gray-700">Founded <b>ChessDepth.in</b>, a platform dedicated to coaching beginner to intermediate <b>chess learners</b> worldwide using structured curricula.</p>
-          </div>
-          <a href="https://chessdepth.in" target="_blank" class="text-sm text-white bg-yellow-600 px-4 py-2 rounded-md text-center hover:bg-yellow-700 transition mt-2">Visit Website</a>
-        </div>
+  <main id="main" class="pt-24">
+    <!-- HERO -->
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 pt-24">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Sourabh K. Joshi</h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-2xl">
+        Electrical Engineer (B.Tech NIT Bhopal) • Power Electronics (M.Tech, NIT Nagpur) • Data Science • Chess Enthusiast
+      </p>
+      <div class="mt-8 flex gap-4">
+        <a href="#work" class="px-7 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 font-semibold text-lg text-white">View My Work</a>
+        <a href="#contact" class="px-7 py-3 border border-gray-600 rounded-lg hover:border-blue-400 font-semibold text-lg text-white">Contact Me</a>
       </div>
-    </div>
-  </section>
 
-  <section id="research" class="py-20 bg-gray-900 px-6 dark:bg-gray-200">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Research & Publications</h3>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 dark:bg-white dark:border-gray-300">
-          <h4 class="text-xl font-semibold text-blue-400 mb-2 dark:text-blue-600">AI-Based SOC & SOH Estimation for Li-ion Batteries</h4>
-          <p class="text-base text-gray-400 mt-2 mb-3 dark:text-gray-700">Combines deep learning with Bio-Inspired Algorithms for robust <b>State-of-Charge (SOC) & State-of-Health (SOH) estimation</b>.</p>
-          <a href="/path/to/battery_paper.pdf" target="_blank" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">Read Preprint →</a>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 dark:bg-white dark:border-gray-300">
-          <h4 class="text-xl font-semibold text-blue-400 mb-2 dark:text-blue-600">Dog-Inspired Gradual Exploration Algorithm (DiGEA)</h4>
-          <p class="text-base text-gray-400 mt-2 mb-3 dark:text-gray-700">Novel <b>metaheuristic optimization algorithm</b> inspired by canine exploration patterns for solving complex engineering problems.</p>
-          <a href="https://github.com/Sourabhjoshi1/DiGEA" target="_blank" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">View Repository →</a>
-        </div>
+      <div class="mt-12 flex gap-8 items-center flex-wrap justify-center">
+        <img src="https://github-readme-stats.vercel.app/api?username=Sourabhjoshi1&show_icons=true&hide_border=true&theme=tokyonight" alt="GitHub stats for Sourabhjoshi1" class="rounded-lg shadow-md w-64 md:w-auto" loading="lazy" />
+        <a href="https://www.chess.com/member/sourabhjoshi01" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-blue-400 text-lg font-medium flex items-center gap-2">♟ Chess Profile (External)</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="py-20 px-6 dark:bg-gray-200">
-    <div class="max-w-xl mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center dark:text-gray-900" data-aos="fade-up">Get in Touch / Neem Contact Op</h3>
-      <p class="text-lg text-gray-300 mb-8 text-center dark:text-gray-700" data-aos="fade-up">
-        Let’s collaborate on research, projects, or chess training! Send me a message below. 
-        <span class="block mt-1">Laten we samenwerken aan onderzoek, projecten of schaaktraining! Stuur me hieronder een bericht.</span>
+    <!-- ABOUT -->
+    <section id="about" class="py-20 max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-6">About Me / Over Mij</h3>
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+        I’m passionate about innovating at the intersection of <strong>Power Electronics, Energy Storage Systems, and Data Science</strong>. My goal is to design intelligent, efficient energy systems for a sustainable future.
+      </p>
+      <p class="text-lg text-gray-400 italic mb-6">Ik ben gepassioneerd over innovatie op het snijvlak van <strong>Vermogenselektronica, Energieopslagsystemen en Datawetenschap</strong>. Mijn doel is het ontwerpen van intelligente, efficiënte energiesystemen voor een duurzame toekomst.</p>
+
+      <p class="text-lg text-gray-400 mb-6">
+        Beyond engineering, I coach chess and founded <a href="https://chessdepth.in" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">ChessDepth.in</a>. I enjoy building projects, publishing research, and teaching.
       </p>
 
-      <form action="YOUR_FORMSPREE_EMAIL_OR_ENDPOINT" 
-            method="POST" 
-            class="space-y-6 p-6 bg-gray-900 rounded-xl shadow-2xl dark:bg-white dark:shadow-lg" 
-            data-aos="fade-up" data-aos-delay="100">
+      <div class="mt-8">
+        <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview" target="_blank" rel="noopener noreferrer" class="text-lg text-blue-400 hover:text-blue-300 border-b border-blue-400 hover:border-blue-300 font-medium">→ Download Detailed Resume (PDF)</a>
+      </div>
+    </section>
 
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Full Name / Volledige Naam</label>
-          <input type="text" id="name" name="name" required
-                 class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 transition duration-150 dark:bg-gray-100 dark:border-gray-400 dark:text-gray-900 dark:placeholder-gray-500"
-                 placeholder="John Doe / Jan Jansen">
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 bg-gray-800 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10 text-center">Core Competencies</h3>
+        <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <li class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-blue-500">
+            <div class="text-4xl mb-2">⚡</div>
+            <p class="font-bold text-lg">Power Electronics</p>
+            <p class="text-sm text-gray-400 mt-1">Converters, Inverters, Control Systems</p>
+          </li>
+          <li class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-green-500">
+            <div class="text-4xl mb-2">🔋</div>
+            <p class="font-bold text-lg">Battery Systems</p>
+            <p class="text-sm text-gray-400 mt-1">BMS, SOC/SOH Estimation</p>
+          </li>
+          <li class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-purple-500">
+            <div class="text-4xl mb-2">🤖</div>
+            <p class="font-bold text-lg">Machine Learning</p>
+            <p class="text-sm text-gray-400 mt-1">Deep Learning, Metaheuristics</p>
+          </li>
+          <li class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-yellow-500">
+            <div class="text-4xl mb-2">📊</div>
+            <p class="font-bold text-lg">Data Analysis</p>
+            <p class="text-sm text-gray-400 mt-1">Python, Signal Processing</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10 text-center">Selected Projects</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- card preserved -->
+          <div class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl font-semibold mb-2 text-blue-400">High-Efficiency Converters</h4>
+              <p class="text-base text-gray-400 mb-4">Designed and simulated bidirectional DC-DC converters focusing on <strong>high efficiency</strong> for grid integration and battery storage systems.</p>
+            </div>
+            <a href="#" class="text-sm inline-block text-white bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700">Explore (Simulations/Paper)</a>
+          </div>
+
+          <div class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl font-semibold mb-2 text-purple-400">AI in Energy Systems</h4>
+              <p class="text-base text-gray-400 mb-4">Built <strong>AI-driven models</strong> for sustainable energy forecasting and intelligent battery health management.</p>
+            </div>
+            <a href="#" class="text-sm inline-block text-white bg-purple-600 px-4 py-2 rounded-md hover:bg-purple-700">View Code/Model (GitHub)</a>
+          </div>
+
+          <div class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl font-semibold mb-2 text-yellow-400">ChessDepth Academy</h4>
+              <p class="text-base text-gray-400 mb-4">Founded <strong>ChessDepth.in</strong>, a platform dedicated to coaching beginner to intermediate chess learners worldwide using structured curricula.</p>
+            </div>
+            <a href="https://chessdepth.in" target="_blank" rel="noopener noreferrer" class="text-sm inline-block text-white bg-yellow-600 px-4 py-2 rounded-md hover:bg-yellow-700">Visit Website</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Email Address / E-mailadres</label>
-          <input type="email" id="email" name="_replyto" required
-                 class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 transition duration-150 dark:bg-gray-100 dark:border-gray-400 dark:text-gray-900 dark:placeholder-gray-500"
-                 placeholder="uwnaam@voorbeeld.com">
+    <!-- RESEARCH -->
+    <section id="research" class="py-20 bg-gray-900 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10 text-center">Research & Publications</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+            <h4 class="text-xl font-semibold text-blue-400 mb-2">AI-Based SOC & SOH Estimation for Li-ion Batteries</h4>
+            <p class="text-base text-gray-400 mt-2 mb-3">Combines deep learning with Bio-Inspired Algorithms for robust <strong>SOC & SOH estimation</strong>.</p>
+            <a href="/path/to/battery_paper.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-400 hover:underline">Read Preprint →</a>
+          </div>
+
+          <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+            <h4 class="text-xl font-semibold text-blue-400 mb-2">Dog-Inspired Gradual Exploration Algorithm (DiGEA)</h4>
+            <p class="text-base text-gray-400 mt-2 mb-3">Novel <strong>metaheuristic optimization algorithm</strong> inspired by canine exploration patterns.</p>
+            <a href="https://github.com/Sourabhjoshi1/DiGEA" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-400 hover:underline">View Repository →</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Message / Bericht</label>
-          <textarea id="message" name="message" rows="4" required
-                    class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 transition duration-150 dark:bg-gray-100 dark:border-gray-400 dark:text-gray-900 dark:placeholder-gray-500"
-                    placeholder="I'd love to collaborate on... / Ik zou graag willen samenwerken aan..."></textarea>
-        </div>
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6 text-center">Get in Touch / Neem Contact Op</h3>
+        <p class="text-lg text-gray-300 mb-8 text-center">Let’s collaborate on research, projects, or chess training!</p>
 
-        <button type="submit"
-                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150">
-          Send Message / Bericht Verzenden
-        </button>
-      </form>
+        <form action="YOUR_FORMSPREE_EMAIL_OR_ENDPOINT" method="POST" class="space-y-6 p-6 bg-gray-900 rounded-xl shadow-2xl" aria-label="Contact form">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+            <input id="name" name="name" autocomplete="name" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white" placeholder="John Doe">
+          </div>
 
-      <p class="italic text-gray-400 text-xl font-serif text-center mt-8 dark:text-gray-600">“Code clean. Lift heavy. Think deeply.” 💡🏋️‍♂️♟</p>
-    </div>
-  </section>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+            <input id="email" name="_replyto" type="email" autocomplete="email" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white" placeholder="you@example.com">
+          </div>
 
-  
-  <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white" placeholder="I'd love to collaborate on..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-lg text-lg font-medium text-white bg-blue-600 hover:bg-blue-700">Send Message</button>
+        </form>
+
+        <p class="italic text-gray-400 text-xl font-serif text-center mt-8">“Code clean. Lift heavy. Think deeply.” 💡🏋️‍♂️♟</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 bg-gray-800 text-center text-gray-400">
     <div class="max-w-6xl mx-auto px-6">
-        
-        <div class="flex justify-center space-x-6 mb-4">
-            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
-                <span class="sr-only">LinkedIn</span>
-                🔗
-            </a>
-            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
-                <span class="sr-only">GitHub</span>
-                🐙
-            </a>
-            <a href="mailto:joshisourabh47@gmail.com" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
-                <span class="sr-only">Email</span>
-                📧
-            </a>
-        </div>
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-3xl">🔗</a>
+        <a href="https://github.com/Sourabhjoshi1" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-3xl">🐙</a>
+        <a href="mailto:joshisourabh47@gmail.com" aria-label="Email" class="text-3xl">📧</a>
+      </div>
 
-        <p class="text-sm md:text-base">
-            © <span id="year"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics
-        </p>
-        <p class="text-xs mt-1">
-            Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span>
-        </p>
+      <p class="text-sm md:text-base">© <span id="year"></span> <span class="font-semibold text-white">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics</p>
+      <p class="text-xs mt-1">Built with ❤️ using <span class="text-blue-400">Tailwind CSS</span></p>
     </div>
   </footer>
 
-  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg">↑ Top</button>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Scripts: defer or run after DOM -->
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Loading spinner
-    window.addEventListener('load', () => {
-      document.getElementById('loading').style.display = 'none';
-    });
-
-    // Theme toggle
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    
-    function updateThemeIcon(isDark) {
-        if (isDark) {
-            toggle.textContent = '☀️'; 
-            toggle.setAttribute('aria-label', 'Toggle light mode');
-        } else {
-            toggle.textContent = '🌙'; 
-            toggle.setAttribute('aria-label', 'Toggle dark mode');
-        }
-    }
-
-    function setTheme(dark) {
-      if (dark) {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-      updateThemeIcon(dark);
-    }
-
+    // Theme handling: prefer saved > system > light
+    const root = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon');
+    const themeToggle = document.getElementById('theme-toggle');
     const saved = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    let initialThemeIsDark;
-    if (saved) {
-        initialThemeIsDark = saved === 'dark';
-    } else {
-        initialThemeIsDark = true;
+    function applyTheme(isDark) {
+      if (isDark) {
+        root.classList.add('dark');
+        document.body.classList.add('dark-theme');
+        themeIcon.textContent = '☀️';
+        themeToggle.setAttribute('aria-pressed', 'true');
+      } else {
+        root.classList.remove('dark');
+        document.body.classList.remove('dark-theme');
+        themeIcon.textContent = '🌙';
+        themeToggle.setAttribute('aria-pressed', 'false');
+      }
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
+    let initialDark = saved ? saved === 'dark' : prefersDark;
+    applyTheme(initialDark);
+    themeToggle.addEventListener('click', () => applyTheme(!document.documentElement.classList.contains('dark')));
 
-    setTheme(initialThemeIsDark);
-    
-    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
+    // Remove loading overlay when page loaded and init AOS
+    window.addEventListener('load', () => {
+      const loading = document.getElementById('loading');
+      if (loading) loading.style.display = 'none';
+      if (window.AOS) AOS.init({ duration: 800, once: true });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
 
-    // Back to top
+    // Back to top visibility
     const topBtn = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
       topBtn.classList.toggle('hidden', window.scrollY < 300);
     });
-    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // AOS init
-    AOS.init({ duration: 800, once: true });
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      if (mobileNav) mobileNav.classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
