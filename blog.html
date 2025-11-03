@@ -20,8 +20,8 @@
 
 <body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
 
-  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+    <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
       <a href="index.html#hero" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
           SJ
@@ -39,7 +39,6 @@
         <a href="blog.html" class="hover:text-white transition dark:hover:text-gray-900 font-bold text-white dark:text-gray-900">Blog</a>
         <a href="index.html#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
         <a href="index.html#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
-        
       </div>
 
       <div class="flex items-center gap-3">
@@ -57,12 +56,7 @@
     </div>
   </nav>
 
-  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-200 hidden">
-    <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin dark:border-gray-400 dark:border-t-blue-500"></div>
-  </div>
-
-
-  <main class="min-h-screen pt-24 pb-16">
+    <main class="min-h-screen pt-24 pb-16">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-4xl font-extrabold pt-10 mb-8 text-center dark:text-gray-900" data-aos="fade-down">
         Engineering Insights & Technical Blog 💡
@@ -80,7 +74,7 @@
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Published: Nov 15, 2025 | Category: Power Electronics, Control
           </p>
-          <p class="text-gray-300 dark:text-gray-700 mb-4">
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
             A technical breakdown of the <b>Lossless Transformer-Coupled (LTC) DC-DC converter</b>—its application in solar/battery systems and utilizing PSO for optimal switching control.
           </p>
           <a href="post-1-converter.html" class="text-blue-400 hover:text-blue-300 font-medium dark:text-blue-600 dark:hover:text-blue-500">
@@ -95,7 +89,7 @@
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Published: Nov 8, 2025 | Category: Power Electronics, Grid Systems
           </p>
-          <p class="text-gray-300 dark:text-gray-700 mb-4">
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
             An examination of <b>Selective Harmonic Elimination (SHE)</b> versus <b>Space Vector Modulation (SVM)</b> in modern three-phase PWM inverters, and minimizing THD for grid compliance.
           </p>
           <a href="post-2-inverter.html" class="text-cyan-400 hover:text-cyan-300 font-medium dark:text-cyan-600 dark:hover:text-cyan-500">
@@ -110,7 +104,7 @@
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Published: Oct 15, 2025 | Category: Data Science, Battery Systems
           </p>
-          <p class="text-gray-300 dark:text-gray-700 mb-4">
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
             A deep dive into why <b>Long Short-Term Memory (LSTM) networks</b> are the superior tool for non-linear, time-series forecasting of battery State-of-Health (SOH).
           </p>
           <a href="post-3-lstm.html" class="text-green-400 hover:text-green-300 font-medium dark:text-green-600 dark:hover:text-green-500">
@@ -125,7 +119,7 @@
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Published: Sep 20, 2025 | Category: Research, Metaheuristics
           </p>
-          <p class="text-gray-300 dark:text-gray-700 mb-4">
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
             A breakdown of the <b>Dog-Inspired Gradual Exploration Algorithm (DiGEA)</b>—its biology, its math, and why it outperforms standard optimization in complex power systems.
           </p>
           <a href="post-4-digea.html" class="text-purple-400 hover:text-purple-300 font-medium dark:text-purple-600 dark:hover:text-purple-500">
@@ -140,7 +134,7 @@
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Published: Aug 5, 2025 | Category: Chess, Personal Development
           </p>
-          <p class="text-gray-300 dark:text-gray-700 mb-4">
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
             Using the <b>Feynman technique and engineering principles</b> (like RCA) to systematically eliminate repetitive errors in your chess game.
           </p>
           <a href="post-5-chess.html" class="text-yellow-400 hover:text-yellow-300 font-medium dark:text-yellow-600 dark:hover:text-yellow-500">
@@ -154,8 +148,31 @@
     </div>
   </main>
 
-  <footer class="py-8 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
-    <p>© <span id="year-blog"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> • Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span></p>
+    <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+    <div class="max-w-6xl mx-auto px-6">
+        
+                <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
+                <span class="sr-only">LinkedIn</span>
+                🔗
+            </a>
+            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
+                <span class="sr-only">GitHub</span>
+                🐙
+            </a>
+            <a href="mailto:joshisourabh47@gmail.com" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
+                <span class="sr-only">Email</span>
+                📧
+            </a>
+        </div>
+
+        <p class="text-sm md:text-base">
+            © <span id="year-blog"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics
+        </p>
+        <p class="text-xs mt-1">
+            Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span>
+        </p>
+    </div>
   </footer>
 
   <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
