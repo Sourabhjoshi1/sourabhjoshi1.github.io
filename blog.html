@@ -32,7 +32,7 @@
         </div>
       </a>
 
-      <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
+            <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
         <a href="index.html#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
         <a href="index.html#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
         <a href="index.html#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
@@ -52,11 +52,38 @@
         <button id="theme-toggle"
                 class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
                 aria-label="Toggle dark mode">🌙</button>
+        
+        <button id="mobile-menu-button"
+                class="md:hidden w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
+                aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
+            ☰
+        </button>
       </div>
     </div>
   </nav>
 
-    <main class="min-h-screen pt-24 pb-16">
+  <div id="mobile-menu" 
+       class="fixed top-0 left-0 w-full h-full transform -translate-x-full 
+              md:hidden bg-gray-900/95 backdrop-blur-md z-40 
+              transition-transform duration-300 ease-in-out dark:bg-gray-200/95">
+    <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+      
+      <a href="index.html#about" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">About</a>
+      <a href="index.html#skills" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Skills</a>
+      <a href="index.html#work" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Work</a>
+      <a href="blog.html" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Blog</a>
+      <a href="index.html#research" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Research</a>
+      <a href="index.html#contact" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Contact</a>
+      
+      <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
+           target="_blank"
+           class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-4">
+          View Resume
+      </a>
+    </div>
+  </div>
+
+  <main class="min-h-screen pt-24 pb-16">
     <div class="max-w-4xl mx-auto px-6">
 
         <header class="text-center pt-8 pb-6 border-b border-gray-700 dark:border-gray-400 mb-10">
@@ -151,7 +178,7 @@
     </div>
   </main>
 
-    <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+    <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
     <div class="max-w-6xl mx-auto px-6">
         
         <div class="flex justify-center space-x-6 mb-4">
@@ -166,7 +193,7 @@
             <a href="mailto:joshisourabh47@gmail.com" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
                 <span class="sr-only">Email</span>
                 📧
-            </a>
+        </a>
         </div>
 
         <p class="text-sm md:text-base">
@@ -182,6 +209,7 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // FIX: Removed loading spinner script since index.html also manages it
     // Theme toggle (Copied and adapted for blog.html)
     const toggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
@@ -220,6 +248,27 @@
     setTheme(initialThemeIsDark);
     
     toggle.onclick = () => setTheme(!html.classList.contains('dark'));
+
+    // Mobile Menu Toggle Logic
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMobileMenu() {
+        const isExpanded = mobileMenu.classList.toggle('-translate-x-full');
+        menuButton.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+    }
+
+    menuButton.addEventListener('click', toggleMobileMenu);
+
+    // Close menu when a link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('-translate-x-full')) {
+                toggleMobileMenu();
+            }
+        });
+    });
 
     // Back to top
     const topBtn = document.getElementById('back-to-top');
