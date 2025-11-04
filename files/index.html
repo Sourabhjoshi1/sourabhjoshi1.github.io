@@ -193,112 +193,115 @@
   </section>
 
   
-  <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
-    <div class="max-w-6xl mx-auto px-6">
-        
-        <div class="flex justify-center space-x-6 mb-4">
-            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
-                <span class="sr-only">LinkedIn</span>
-                🔗
-            </a>
-            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
-                <span class="sr-only">GitHub</span>
-                🐙
-            </a>
-            <a href="mailto:joshisourabh47@gmail.com" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
-                <span class="sr-only">Email</span>
-                📧
-            </a>
-        </div>
-
-        <p class="text-sm md:text-base">
-            © <span id="year"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics
-        </p>
-        <p class="text-xs mt-1">
-            Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span>
-        </p>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <script>
-    // Theme toggle
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
+    // --- COMPONENT LOADING FUNCTION ---
+    function loadComponent(url, elementId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+                // Re-initialize scripts or attributes that need immediate setup after insertion
+                initializeNavScripts();
+                restoreThemeState(); 
+            })
+            .catch(error => console.error(`Could not load ${url}:`, error));
+    }
+
+    // --- SCRIPT INITIALIZATION (RUNS AFTER COMPONENTS LOAD) ---
+    function initializeNavScripts() {
+        // Theme toggle logic (Copied from the original script)
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        function updateThemeIcon(isDark) {
+            if (isDark) {
+                toggle.textContent = '☀️'; 
+                toggle.setAttribute('aria-label', 'Toggle light mode');
+            } else {
+                toggle.textContent = '🌙'; 
+                toggle.setAttribute('aria-label', 'Toggle dark mode');
+            }
+        }
+
+        // Must redefine setTheme globally for the button listener
+        window.setTheme = function(dark) {
+          if (dark) {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+          }
+          updateThemeIcon(dark);
+        };
+        
+        toggle.onclick = () => window.setTheme(!html.classList.contains('dark'));
+        
+        // Mobile Menu Toggle Logic
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileMenu() {
+            const isClosed = mobileMenu.classList.toggle('-translate-x-full');
+            menuButton.setAttribute('aria-expanded', isClosed ? 'false' : 'true');
+        }
+
+        if (menuButton) menuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('-translate-x-full')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+        
+        // Footer year update (The ID is 'year-footer' in footer.html)
+        const yearSpan = document.getElementById('year-footer');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    }
     
-    function updateThemeIcon(isDark) {
-        if (isDark) {
-            toggle.textContent = '☀️'; 
-            toggle.setAttribute('aria-label', 'Toggle light mode');
+    // --- THEME STATE RESTORATION ---
+    function restoreThemeState() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        let initialThemeIsDark;
+        if (saved) {
+            initialThemeIsDark = saved === 'dark';
         } else {
-            toggle.textContent = '🌙'; 
-            toggle.setAttribute('aria-label', 'Toggle dark mode');
+            initialThemeIsDark = true;
+        }
+        
+        // Apply the stored/default theme to the newly inserted header
+        if (window.setTheme) {
+            window.setTheme(initialThemeIsDark);
         }
     }
 
-    function setTheme(dark) {
-      if (dark) {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-      updateThemeIcon(dark);
-    }
 
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    let initialThemeIsDark;
-    if (saved) {
-        initialThemeIsDark = saved === 'dark';
-    } else {
-        initialThemeIsDark = true;
-    }
-
-    setTheme(initialThemeIsDark);
-    
-    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
-
-    // Mobile Menu Toggle Logic
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    function toggleMobileMenu() {
-        // Toggles the '-translate-x-full' class
-        const isClosed = mobileMenu.classList.toggle('-translate-x-full');
-        // ARIA: If it's closed, aria-expanded should be false (and vice versa)
-        menuButton.setAttribute('aria-expanded', isClosed ? 'false' : 'true');
-    }
-
-    menuButton.addEventListener('click', toggleMobileMenu);
-
-    // Close menu when a link is clicked
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Check if the menu is open before closing
-            if (!mobileMenu.classList.contains('-translate-x-full')) {
-                toggleMobileMenu();
-            }
-        });
+    // --- INITIALIZATION ---
+    window.addEventListener('load', () => {
+      // Load Header and Footer (NOTE: Paths are relative to index.html and include the 'files/' folder)
+      loadComponent('files/header.html', 'header-placeholder');
+      loadComponent('files/footer.html', 'footer-placeholder');
+      
+      setTimeout(() => document.getElementById('loading').style.display = 'none', 500);
+      
+      // AOS init
+      AOS.init({ duration: 800, once: true });
+      
+      // Footer year (for the small version embedded in this file if needed)
+      document.getElementById('year').textContent = new Date().getFullYear(); 
     });
-
-    // Back to top
-    const topBtn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      topBtn.classList.toggle('hidden', window.scrollY < 300);
-    });
-    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // AOS init
-    AOS.init({ duration: 800, once: true });
   </script>
 </body>
 </html>
