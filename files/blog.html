@@ -20,68 +20,7 @@
 
 <body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
 
-    <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
-      <a href="index.html#hero" class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
-          SJ
-        </div>
-        <div>
-          <h1 class="font-semibold text-lg dark:text-gray-900">Sourabh K. Joshi</h1>
-          <p class="text-xs text-gray-400 dark:text-gray-600">Electrical Engineer • Power Electronics</p>
-        </div>
-      </a>
-
-            <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
-        <a href="index.html#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
-        <a href="index.html#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
-        <a href="index.html#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
-        <a href="blog.html" class="hover:text-white transition dark:hover:text-gray-900 font-bold text-white dark:text-gray-900">Blog</a>
-        <a href="index.html#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
-        <a href="index.html#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
-           target="_blank"
-           class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold shadow hover:bg-blue-700 transition"
-           title="View Resume">
-          📄
-        </a>
-
-        <button id="theme-toggle"
-                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
-                aria-label="Toggle dark mode">🌙</button>
-        
-        <button id="mobile-menu-button"
-                class="md:hidden w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
-                aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
-            ☰
-        </button>
-      </div>
-    </div>
-  </nav>
-  
-  <div id="mobile-menu" 
-       class="fixed top-0 left-0 w-full h-full transform -translate-x-full 
-              md:hidden bg-gray-900/95 backdrop-blur-md z-40 
-              transition-transform duration-300 ease-in-out dark:bg-gray-200/95">
-    <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
-      
-      <a href="index.html#about" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">About</a>
-      <a href="index.html#skills" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Skills</a>
-      <a href="index.html#work" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Work</a>
-      <a href="blog.html" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Blog</a>
-      <a href="index.html#research" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Research</a>
-      <a href="index.html#contact" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Contact</a>
-      
-      <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
-           target="_blank"
-           class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-4">
-          View Resume
-      </a>
-    </div>
-  </div>
+  <div id="header-placeholder"></div>
 
     <main class="min-h-screen pt-24 pb-16">
     <div class="max-w-4xl mx-auto px-6">
@@ -178,110 +117,111 @@
     </div>
   </main>
 
-    <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
-    <div class="max-w-6xl mx-auto px-6">
-        
-        <div class="flex justify-center space-x-6 mb-4">
-            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
-                <span class="sr-only">LinkedIn</span>
-                🔗
-            </a>
-            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
-                <span class="sr-only">GitHub</span>
-                🐙
-            </a>
-            <a href="mailto:joshisourabh47@gmail.com" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
-                <span class="sr-only">Email</span>
-                📧
-        </a>
-        </div>
-
-        <p class="text-sm md:text-base">
-            © <span id="year-blog"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics
-        </p>
-        <p class="text-xs mt-1">
-            Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span>
-        </p>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Theme toggle (Copied and adapted for blog.html)
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    
-    function updateThemeIcon(isDark) {
-        if (isDark) {
-            toggle.textContent = '☀️'; 
-            toggle.setAttribute('aria-label', 'Toggle light mode');
-        } else {
-            toggle.textContent = '🌙'; 
-            toggle.setAttribute('aria-label', 'Toggle dark mode');
-        }
-    }
-
-    function setTheme(dark) {
-      if (dark) {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-      updateThemeIcon(dark);
-    }
-
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    let initialThemeIsDark;
-    if (saved) {
-        initialThemeIsDark = saved === 'dark';
-    } else {
-        initialThemeIsDark = true;
-    }
-
-    setTheme(initialThemeIsDark);
-    
-    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
-
-    // Mobile Menu Toggle Logic
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    function toggleMobileMenu() {
-        const isClosed = mobileMenu.classList.toggle('-translate-x-full');
-        menuButton.setAttribute('aria-expanded', isClosed ? 'false' : 'true');
+    // --- COMPONENT LOADING FUNCTION ---
+    function loadComponent(url, elementId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+                // Re-initialize scripts or attributes that need immediate setup after insertion
+                initializeNavScripts();
+                restoreThemeState(); 
+            })
+            .catch(error => console.error(`Could not load ${url}:`, error));
     }
 
-    menuButton.addEventListener('click', toggleMobileMenu);
-
-    // Close menu when a link is clicked
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Check if the menu is open before closing
-            if (!mobileMenu.classList.contains('-translate-x-full')) {
-                toggleMobileMenu();
+    // --- SCRIPT INITIALIZATION (RUNS AFTER COMPONENTS LOAD) ---
+    function initializeNavScripts() {
+        // Theme toggle logic 
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        function updateThemeIcon(isDark) {
+            if (isDark) {
+                toggle.textContent = '☀️'; 
+                toggle.setAttribute('aria-label', 'Toggle light mode');
+            } else {
+                toggle.textContent = '🌙'; 
+                toggle.setAttribute('aria-label', 'Toggle dark mode');
             }
+        }
+
+        // Must redefine setTheme globally for the button listener
+        window.setTheme = function(dark) {
+          if (dark) {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+          }
+          updateThemeIcon(dark);
+        };
+        
+        if (toggle) toggle.onclick = () => window.setTheme(!html.classList.contains('dark'));
+        
+        // Mobile Menu Toggle Logic
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileMenu() {
+            const isClosed = mobileMenu.classList.toggle('-translate-x-full');
+            menuButton.setAttribute('aria-expanded', isClosed ? 'false' : 'true');
+        }
+
+        if (menuButton) menuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('-translate-x-full')) {
+                    toggleMobileMenu();
+                }
+            });
         });
+        
+        // Footer year update (The ID is 'year-footer' in footer.html)
+        const yearSpan = document.getElementById('year-footer');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    }
+    
+    // --- THEME STATE RESTORATION ---
+    function restoreThemeState() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        let initialThemeIsDark;
+        if (saved) {
+            initialThemeIsDark = saved === 'dark';
+        } else {
+            initialThemeIsDark = true;
+        }
+        
+        // Apply the stored/default theme to the newly inserted header
+        if (window.setTheme) {
+            window.setTheme(initialThemeIsDark);
+        }
+    }
+
+
+    // --- INITIALIZATION ---
+    window.addEventListener('load', () => {
+      // Load Header and Footer (NOTE: Paths are relative to blog.html and include the 'files/' folder)
+      loadComponent('files/header.html', 'header-placeholder');
+      loadComponent('files/footer.html', 'footer-placeholder');
+      
+      // AOS init
+      AOS.init({ duration: 800, once: true });
     });
-
-    // Back to top
-    const topBtn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      topBtn.classList.toggle('hidden', window.scrollY < 300);
-    });
-    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Footer year
-    document.getElementById('year-blog').textContent = new Date().getFullYear();
-
-    // AOS init
-    AOS.init({ duration: 800, once: true });
+    
+    // Note: Removed loading spinner logic from blog.html as it causes issues when loading components
   </script>
 </body>
 </html>
