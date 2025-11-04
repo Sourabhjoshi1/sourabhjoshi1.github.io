@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Sourabh K. Joshi - Power Electronics & Data Science</title>
+  <meta name="description" content="Blog focusing on Power Electronics, Battery Systems, Machine Learning, and innovative engineering solutions." />
+  
+  <link rel="icon" href="https://github.com/Sourabhjoshi1/sourabhjoshi1.github.io/blob/main/favicon/android-chrome-192x192.png?raw=true" type="image/png" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class', 
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
+
+    <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
+      <a href="index.html#hero" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
+          SJ
+        </div>
+        <div>
+          <h1 class="font-semibold text-lg dark:text-gray-900">Sourabh K. Joshi</h1>
+          <p class="text-xs text-gray-400 dark:text-gray-600">Electrical Engineer • Power Electronics</p>
+        </div>
+      </a>
+
+            <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
+        <a href="index.html#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
+        <a href="index.html#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
+        <a href="index.html#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
+        <a href="blog.html" class="hover:text-white transition dark:hover:text-gray-900 font-bold text-white dark:text-gray-900">Blog</a>
+        <a href="index.html#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
+        <a href="index.html#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
+           target="_blank"
+           class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold shadow hover:bg-blue-700 transition"
+           title="View Resume">
+          📄
+        </a>
+
+        <button id="theme-toggle"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
+                aria-label="Toggle dark mode">🌙</button>
+        
+        <button id="mobile-menu-button"
+                class="md:hidden w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
+                aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
+            ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="mobile-menu" 
+       class="fixed top-0 left-0 w-full h-full transform -translate-x-full 
+              md:hidden bg-gray-900/95 backdrop-blur-md z-40 
+              transition-transform duration-300 ease-in-out dark:bg-gray-200/95">
+    <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+      
+      <a href="index.html#about" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">About</a>
+      <a href="index.html#skills" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Skills</a>
+      <a href="index.html#work" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Work</a>
+      <a href="blog.html" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Blog</a>
+      <a href="index.html#research" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Research</a>
+      <a href="index.html#contact" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Contact</a>
+      
+      <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
+           target="_blank"
+           class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-4">
+          View Resume
+      </a>
+    </div>
+  </div>
+
+    <main class="min-h-screen pt-24 pb-16">
+    <div class="max-w-4xl mx-auto px-6">
+
+        <header class="text-center pt-8 pb-6 border-b border-gray-700 dark:border-gray-400 mb-10">
+            <h2 class="text-4xl font-extrabold dark:text-gray-900" data-aos="fade-down">
+                Technical Blog & Insights 💡
+            </h2>
+            <p class="text-xl text-gray-400 mt-2 dark:text-gray-600" data-aos="fade-up">
+                Deep dives into Power Electronics, ML in Energy, and Chess Strategy.
+            </p>
+        </header>
+
+      <div id="blog-posts" class="space-y-12">
+        
+        <article data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-xl dark:bg-white border-l-4 border-blue-500">
+          <h3 class="text-2xl font-semibold text-blue-400 dark:text-blue-600 mb-2">
+            1. DC-DC Converters: Pushing Efficiency Limits with the LTC Topology
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            Published: Nov 15, 2025 | Category: Power Electronics, Control
+          </p>
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
+            A technical breakdown of the <b>Lossless Transformer-Coupled (LTC) DC-DC converter</b>—its application in solar/battery systems and utilizing PSO for optimal switching control.
+          </p>
+          <a href="post-1-converter.html" class="text-blue-400 hover:text-blue-300 font-medium dark:text-blue-600 dark:hover:text-blue-500">
+            Read Full Post →
+          </a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-xl dark:bg-white border-l-4 border-cyan-500">
+          <h3 class="text-2xl font-semibold text-cyan-400 dark:text-cyan-600 mb-2">
+            2. Harmonic Mitigation in PWM Inverters using Carrier-Based Control
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            Published: Nov 8, 2025 | Category: Power Electronics, Grid Systems
+          </p>
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
+            An examination of <b>Selective Harmonic Elimination (SHE)</b> versus <b>Space Vector Modulation (SVM)</b> in modern three-phase PWM inverters, and minimizing THD for grid compliance.
+          </p>
+          <a href="post-2-inverter.html" class="text-cyan-400 hover:text-cyan-300 font-medium dark:text-cyan-600 dark:hover:text-cyan-500">
+            Read Full Post →
+          </a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="200" class="p-6 bg-gray-800 rounded-lg shadow-xl dark:bg-white border-l-4 border-green-500">
+          <h3 class="text-2xl font-semibold text-green-400 dark:text-green-600 mb-2">
+            3. Beyond the Capacity Fade: Predicting Battery Lifespan with LSTMs
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            Published: Oct 15, 2025 | Category: Data Science, Battery Systems
+          </p>
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
+            A deep dive into why <b>Long Short-Term Memory (LSTM) networks</b> are the superior tool for non-linear, time-series forecasting of battery State-of-Health (SOH).
+          </p>
+          <a href="post-3-lstm.html" class="text-green-400 hover:text-green-300 font-medium dark:text-green-600 dark:hover:text-green-500">
+            Read Full Post →
+          </a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="300" class="p-6 bg-gray-800 rounded-lg shadow-xl dark:bg-white border-l-4 border-purple-500">
+          <h3 class="text-2xl font-semibold text-purple-400 dark:text-purple-600 mb-2">
+            4. DiGEA Explained: How Canine Exploration Inspired a New Optimization Algorithm
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            Published: Sep 20, 2025 | Category: Research, Metaheuristics
+          </p>
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
+            A breakdown of the <b>Dog-Inspired Gradual Exploration Algorithm (DiGEA)</b>—its biology, its math, and why it outperforms standard optimization in complex power systems.
+          </p>
+          <a href="post-4-digea.html" class="text-purple-400 hover:text-purple-300 font-medium dark:text-purple-600 dark:hover:text-purple-500">
+            Read Full Post →
+          </a>
+        </article>
+        
+        <article data-aos="fade-up" data-aos-delay="400" class="p-6 bg-gray-800 rounded-lg shadow-xl dark:bg-white border-l-4 border-yellow-500">
+          <h3 class="text-2xl font-semibold text-yellow-400 dark:text-yellow-600 mb-2">
+            5. The Engineering Mindset: Applying Root Cause Analysis to Chess Blunders
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            Published: Aug 5, 2025 | Category: Chess, Personal Development
+          </p>
+          <p class="text-base text-gray-300 dark:text-gray-700 mb-4">
+            Using the <b>Feynman technique and engineering principles</b> (like RCA) to systematically eliminate repetitive errors in your chess game.
+          </p>
+          <a href="post-5-chess.html" class="text-yellow-400 hover:text-yellow-300 font-medium dark:text-yellow-600 dark:hover:text-yellow-500">
+            Read Full Post →
+          </a>
+        </article>
+        
+      </div>
+      
+      <p class="text-center text-gray-500 dark:text-gray-600 mt-16">More posts coming soon!</p>
+    </div>
+  </main>
+
+    <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
+                <span class="sr-only">LinkedIn</span>
+                🔗
+            </a>
+            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
+                <span class="sr-only">GitHub</span>
+                🐙
+            </a>
+            <a href="mailto:joshisourabh47@gmail.com" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
+                <span class="sr-only">Email</span>
+                📧
+        </a>
+        </div>
+
+        <p class="text-sm md:text-base">
+            © <span id="year-blog"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics
+        </p>
+        <p class="text-xs mt-1">
+            Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span>
+        </p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Theme toggle (Copied and adapted for blog.html)
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    function updateThemeIcon(isDark) {
+        if (isDark) {
+            toggle.textContent = '☀️'; 
+            toggle.setAttribute('aria-label', 'Toggle light mode');
+        } else {
+            toggle.textContent = '🌙'; 
+            toggle.setAttribute('aria-label', 'Toggle dark mode');
+        }
+    }
+
+    function setTheme(dark) {
+      if (dark) {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+      updateThemeIcon(dark);
+    }
+
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    let initialThemeIsDark;
+    if (saved) {
+        initialThemeIsDark = saved === 'dark';
+    } else {
+        initialThemeIsDark = true;
+    }
+
+    setTheme(initialThemeIsDark);
+    
+    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
+
+    // Mobile Menu Toggle Logic
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMobileMenu() {
+        const isClosed = mobileMenu.classList.toggle('-translate-x-full');
+        menuButton.setAttribute('aria-expanded', isClosed ? 'false' : 'true');
+    }
+
+    menuButton.addEventListener('click', toggleMobileMenu);
+
+    // Close menu when a link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Check if the menu is open before closing
+            if (!mobileMenu.classList.contains('-translate-x-full')) {
+                toggleMobileMenu();
+            }
+        });
+    });
+
+    // Back to top
+    const topBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('hidden', window.scrollY < 300);
+    });
+    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Footer year
+    document.getElementById('year-blog').textContent = new Date().getFullYear();
+
+    // AOS init
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
