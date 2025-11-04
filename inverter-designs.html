@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From DC to AC: The Critical Role of Inverters in Renewables | Sourabh K. Joshi</title>
+  <meta name="description" content="Examining the topologies and control strategies that transform DC power from solar panels and batteries into stable, usable AC grid electricity." />
+  
+  <link rel="icon" href="https://github.com/Sourabhjoshi1/sourabhjoshi1.github.io/blob/main/favicon/android-chrome-192x192.png?raw=true" type="image/png" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class', 
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
+
+  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
+      <a href="index.html#hero" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
+          SJ
+        </div>
+        <div>
+          <h1 class="font-semibold text-lg dark:text-gray-900">Sourabh K. Joshi</h1>
+          <p class="text-xs text-gray-400 dark:text-gray-600">Electrical Engineer • Blog</p>
+        </div>
+      </a>
+
+      <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
+        <a href="index.html#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
+        <a href="index.html#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
+        <a href="index.html#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
+        <a href="blog.html" class="text-blue-400 dark:text-blue-600 font-bold">Blog</a>
+        <a href="index.html#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
+        <a href="index.html#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-40 pb-20 bg-gray-800 dark:bg-gray-300">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="text-sm font-semibold text-green-400 uppercase tracking-wider dark:text-green-600" data-aos="fade-down">Power Electronics</span>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-3 mb-4 leading-tight text-white dark:text-gray-900" data-aos="fade-up">
+        From DC to AC: The Critical Role of Inverters in Renewables ☀️
+      </h1>
+      
+      <p class="text-lg text-gray-400 dark:text-gray-600" data-aos="fade-up" data-aos-delay="100">
+        Published: November 6, 2025 | Reading Time: 6 min
+      </p>
+    </div>
+  </header>
+
+  <section id="article-content" class="py-16 dark:bg-gray-200">
+    <div class="max-w-3xl mx-auto px-6 text-lg text-gray-300 dark:text-gray-800 leading-relaxed space-y-8">
+      
+      <p>
+        The global power grid operates almost entirely on **Alternating Current (AC)**. However, most modern renewable energy sources—specifically photovoltaic (solar) panels and battery storage systems—natively produce **Direct Current (DC)**. The device that bridges this fundamental gap and makes renewable energy compatible with our homes, factories, and the utility grid is the **power electronic inverter**.
+      </p>
+
+      <h2 class="text-3xl font-bold mt-10 mb-4 dark:text-gray-900">Basic Inverter Topologies</h2>
+      
+      <p>
+        An inverter's primary function is to convert DC input voltage into a symmetrical AC output voltage of a desired magnitude and frequency. The quality of this output—specifically its Total Harmonic Distortion (THD)—is critical for grid compatibility.
+      </p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-3 dark:text-gray-900">1. Voltage Source Inverters (VSI)</h3>
+      
+      <p>
+        VSIs are the most common type, utilizing a stiff DC voltage source (like a large capacitor bank) to control the output AC voltage waveform. These are categorized by their complexity and power capability:
+      </p>
+
+      <ul class="list-disc pl-8 space-y-2">
+        <li>**Half-Bridge/Full-Bridge:** Fundamental structures for single-phase inversion, utilizing four switches (for full-bridge) to create the necessary AC polarity reversals.</li>
+        <li>**Three-Phase Bridge:** Utilizes six switches (three legs) to generate three-phase power, essential for industrial motors and utility-scale grid injection.</li>
+      </ul>
+      
+      <h3 class="2xl font-bold mt-8 mb-3 dark:text-gray-900">2. Multilevel Inverters (MLI)</h3>
+      
+      <p>
+        As power levels increase and grid standards tighten, **Multilevel Inverters** become essential. MLIs synthesize an AC waveform by using several lower voltage DC sources (or capacitors) to generate a stepped, stair-cased voltage output. This results in a cleaner, near-sinusoidal waveform with significantly lower THD, reducing the size and cost of the required output filters.
+      </p>
+      
+      <blockquote class="border-l-4 border-green-500 pl-4 py-2 italic text-gray-400 dark:text-gray-700">
+        "Multilevel Inverters, such as Cascaded H-Bridge (CHB) or Neutral Point Clamped (NPC) inverters, are preferred for high-voltage, megawatt-scale applications due to their ability to use switches with lower voltage ratings."
+      </blockquote>
+
+      <h2 class="text-3xl font-bold mt-10 mb-4 dark:text-gray-900">Control and Grid Synchronization</h2>
+
+      <p>
+        The heart of a modern inverter is its **control strategy**, which relies heavily on the **Pulse Width Modulation (PWM)** techniques we discussed in the previous article. For a grid-tied inverter, the control system must perform two primary functions:
+      </p>
+
+      <ul class="list-disc pl-8 space-y-2">
+        <li>**Voltage Control:** Ensuring the output AC voltage magnitude is correct.</li>
+        <li>**Grid Synchronization:** The inverter must precisely match the frequency and phase angle of the utility grid voltage. This is typically achieved using a **Phase-Locked Loop (PLL)**, a control system that ensures the inverter is injecting current perfectly in sync with the grid.</li>
+      </ul>
+      
+      <p>
+        Advanced control, often implemented digitally via microcontrollers (DSPs/FPGAs), allows inverters to actively participate in grid support, providing features like **reactive power compensation** and stability during fault conditions. This moves the inverter beyond a simple conversion device to an intelligent power asset.
+      </p>
+
+      <p class="pt-6 text-base text-gray-400 dark:text-gray-700">
+        <a href="blog.html" class="text-blue-400 hover:underline dark:text-blue-600">← Back to all articles</a>
+      </p>
+      
+    </div>
+  </section>
+
+
+  <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
+                <span class="sr-only">LinkedIn</span>
+                🔗
+            </a>
+            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
+                <span class="sr-only">GitHub</span>
+                🐙
+            </a>
+            <a href="mailto:joshisourabh47@gmail.com" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
+                <span class="sr-only">Email</span>
+                📧
+            </a>
+        </div>
+
+        <p class="text-sm md:text-base">
+            © <span id="year"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics
+        </p>
+        <p class="text-xs mt-1">
+            Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span>
+        </p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Theme toggle (Copied from index.html)
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    function updateThemeIcon(isDark) {
+        if (isDark) {
+            toggle.textContent = '☀️'; 
+            toggle.setAttribute('aria-label', 'Toggle light mode');
+        } else {
+            toggle.textContent = '🌙'; 
+            toggle.setAttribute('aria-label', 'Toggle dark mode');
+        }
+    }
+
+    function setTheme(dark) {
+      if (dark) {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+      updateThemeIcon(dark);
+    }
+
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    let initialThemeIsDark;
+    if (saved) {
+        initialThemeIsDark = saved === 'dark';
+    } else {
+        initialThemeIsDark = true;
+    }
+
+    setTheme(initialThemeIsDark);
+    
+    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
+
+    // Back to top
+    const topBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('hidden', window.scrollY < 300);
+    });
+    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // AOS init
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
