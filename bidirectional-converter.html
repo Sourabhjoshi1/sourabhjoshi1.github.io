@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bidirectional Converters: The Backbone of Energy Storage | Sourabh K. Joshi</title>
+  <meta name="description" content="A detailed technical exploration of how bidirectional DC-DC converters facilitate seamless charging and discharging in Battery Energy Storage Systems (BESS) and grid integration." />
+  
+  <link rel="icon" href="https://github.com/Sourabhjoshi1/sourabhjoshi1.github.io/blob/main/favicon/android-chrome-192x192.png?raw=true" type="image/png" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class', 
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
+
+  <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
+      <a href="index.html#hero" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
+          SJ
+        </div>
+        <div>
+          <h1 class="font-semibold text-lg dark:text-gray-900">Sourabh K. Joshi</h1>
+          <p class="text-xs text-gray-400 dark:text-gray-600">Electrical Engineer • Blog</p>
+        </div>
+      </a>
+
+      <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
+        <a href="index.html#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
+        <a href="index.html#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
+        <a href="index.html#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
+        <a href="blog.html" class="text-blue-400 dark:text-blue-600 font-bold">Blog</a>
+        <a href="index.html#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
+        <a href="index.html#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
+      </div>
+      
+      </div>
+  </nav>
+
+  <header class="pt-32 pb-16 bg-gray-900 dark:bg-gray-200">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="text-sm font-semibold text-blue-400 uppercase tracking-wider dark:text-blue-600" data-aos="fade-down">Power Electronics</span>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-3 mb-4 leading-tight dark:text-gray-900" data-aos="fade-up">
+        Bidirectional Converters: The Backbone of Energy Storage 🔋
+      </h1>
+      
+      <p class="text-lg text-gray-400 dark:text-gray-600" data-aos="fade-up" data-aos-delay="100">
+        Published: November 4, 2025 | Reading Time: 7 min
+      </p>
+    </div>
+  </header>
+
+  <section id="article-content" class="py-16 dark:bg-gray-300">
+    <div class="max-w-3xl mx-auto px-6 text-lg text-gray-300 dark:text-gray-800 leading-relaxed space-y-8">
+      
+      <p>
+        Welcome to my first deep dive into the technology enabling the energy transition. For modern Battery Energy Storage Systems (BESS) to work effectively, they require a power component that can handle energy flow in **two directions**: charging the battery from the grid/source, and discharging the battery back into the load or grid. This component is the **bidirectional DC-DC converter**.
+      </p>
+
+      <h2 class="text-3xl font-bold mt-10 mb-4 dark:text-gray-900">The Necessity of Bidirectional Flow</h2>
+      
+      <p>
+        Unlike a standard power supply that only pushes power in one direction, a bidirectional converter is crucial for **grid stabilization** and maximizing the efficiency of renewables.
+      </p>
+      
+      <p>
+        In **buck mode** (charging), the converter steps down the high voltage bus to safely charge the low-voltage battery. In **boost mode** (discharging), it steps up the battery voltage to meet the needs of the high-voltage inverter bus. The seamless transition between these modes is achieved through clever switching control, often utilizing advanced **PWM strategies** (a topic for the next post!).
+      </p>
+
+      <blockquote class="border-l-4 border-blue-500 pl-4 py-2 italic text-gray-400 dark:text-gray-700">
+        "A highly efficient bidirectional converter is the ultimate tool for maximizing battery lifespan and minimizing thermal losses in large-scale energy storage."
+      </blockquote>
+
+      <h3 class="text-2xl font-bold mt-8 mb-3 dark:text-gray-900">Key Topologies and Control</h3>
+      
+      <p>
+        While many variations exist, the **Dual Active Bridge (DAB)** converter is one of the most popular choices for high-power, isolated applications due to its high power density and ability to achieve zero-voltage switching (ZVS) across a wide range, thus significantly reducing switching losses.
+      </p>
+
+      <ul class="list-disc pl-8 space-y-2">
+        <li>**High Efficiency:** ZVS capability reduces heat and extends component life.</li>
+        <li>**Isolation:** Galvanic isolation between high and low voltage sides enhances safety.</li>
+        <li>**Fast Response:** Critical for quickly responding to grid events and ensuring system reliability.</li>
+      </ul>
+
+      <p>
+        I am currently simulating advanced **Model Predictive Control (MPC)** techniques to optimize the DAB converter's performance under dynamic battery State-of-Charge (SOC) conditions. More on this research in a future post!
+      </p>
+
+      <p class="pt-6 text-base text-gray-400 dark:text-gray-700">
+        <a href="blog.html" class="text-blue-400 hover:underline dark:text-blue-600">← Back to all articles</a>
+      </p>
+
+      </div>
+  </section>
+
+
+  <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
+                <span class="sr-only">LinkedIn</span>
+                🔗
+            </a>
+            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
+                <span class="sr-only">GitHub</span>
+                🐙
+            </a>
+            <a href="mailto:joshisourabh47@gmail.com" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
+                <span class="sr-only">Email</span>
+                📧
+            </a>
+        </div>
+
+        <p class="text-sm md:text-base">
+            © <span id="year"></span> <span class="font-semibold text-white dark:text-gray-900">Sourabh K. Joshi</span> | Electrical Engineer • Power Electronics
+        </p>
+        <p class="text-xs mt-1">
+            Built with ❤️ using <span class="text-blue-400 dark:text-blue-600">Tailwind CSS</span>
+        </p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Theme toggle (Copied from index.html)
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    function updateThemeIcon(isDark) {
+        if (isDark) {
+            toggle.textContent = '☀️'; 
+            toggle.setAttribute('aria-label', 'Toggle light mode');
+        } else {
+            toggle.textContent = '🌙'; 
+            toggle.setAttribute('aria-label', 'Toggle dark mode');
+        }
+    }
+
+    function setTheme(dark) {
+      if (dark) {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+      updateThemeIcon(dark);
+    }
+
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    let initialThemeIsDark;
+    if (saved) {
+        initialThemeIsDark = saved === 'dark';
+    } else {
+        // Default to dark mode if no preference is saved
+        initialThemeIsDark = true;
+    }
+
+    setTheme(initialThemeIsDark);
+    
+    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
+
+    // Back to top
+    const topBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('hidden', window.scrollY < 300);
+    });
+    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // AOS init
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
