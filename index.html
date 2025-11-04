@@ -20,7 +20,7 @@
 
 <body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
 
-  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-200">
+  <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-200 transition-opacity duration-500 ease-out">
     <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin dark:border-gray-400 dark:border-t-blue-500"></div>
   </div>
 
@@ -360,6 +360,20 @@
 
     // AOS init
     AOS.init({ duration: 800, once: true });
+
+    // 🚀 NEW: Hide the loading screen after the page fully loads
+    window.addEventListener('load', () => {
+        const loadingScreen = document.getElementById('loading');
+        if (loadingScreen) {
+            // Use a fade-out effect 
+            loadingScreen.style.opacity = '0'; 
+            // Remove the element from the flow after the transition (0.5s)
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500); 
+        }
+    });
+
   </script>
 </body>
 </html>
