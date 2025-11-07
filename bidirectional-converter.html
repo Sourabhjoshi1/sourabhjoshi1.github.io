@@ -21,7 +21,7 @@
 <body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
 
   <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6 gap-4">
       <a href="index.html#hero" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
           SJ
@@ -32,7 +32,7 @@
         </div>
       </a>
 
-      <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
+      <div class="hidden md:flex items-center gap-6 text-gray-300 dark:text-gray-700">
         <a href="index.html#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
         <a href="index.html#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
         <a href="index.html#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
@@ -40,8 +40,9 @@
         <a href="index.html#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
         <a href="index.html#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
       </div>
-      
-      </div>
+
+      <button id="theme-toggle" data-theme-toggle class="text-xl text-gray-300 hover:text-white transition dark:text-gray-700 dark:hover:text-gray-900" aria-label="Toggle dark mode">🌙</button>
+    </div>
   </nav>
 
   <header class="pt-40 pb-20 bg-gray-800 dark:bg-gray-300">
@@ -55,16 +56,75 @@
       <p class="text-lg text-gray-400 dark:text-gray-600" data-aos="fade-up" data-aos-delay="100">
         Published: November 4, 2025 | Reading Time: 7 min
       </p>
+      <div class="mt-10 grid gap-4 md:grid-cols-3 text-left" data-aos="fade-up" data-aos-delay="150">
+        <div class="rounded-xl bg-gray-900/60 p-5 border border-blue-600/40 shadow dark:bg-white dark:border-blue-200">
+          <p class="text-sm uppercase tracking-wide text-blue-300 dark:text-blue-600 font-semibold">Power Window</p>
+          <p class="mt-2 text-gray-200 dark:text-gray-700">30–750 V DC, scalable to 250 kW modules for utility-grade battery strings.</p>
+        </div>
+        <div class="rounded-xl bg-gray-900/60 p-5 border border-emerald-600/40 shadow dark:bg-white dark:border-emerald-200">
+          <p class="text-sm uppercase tracking-wide text-emerald-300 dark:text-emerald-600 font-semibold">Where It Fits</p>
+          <p class="mt-2 text-gray-200 dark:text-gray-700">Battery energy storage, V2G chargers, and hybrid microgrids with fast ramp demand.</p>
+        </div>
+        <div class="rounded-xl bg-gray-900/60 p-5 border border-purple-600/40 shadow dark:bg-white dark:border-purple-200">
+          <p class="text-sm uppercase tracking-wide text-purple-300 dark:text-purple-600 font-semibold">Key Takeaway</p>
+          <p class="mt-2 text-gray-200 dark:text-gray-700">Control strategy, not just hardware, dictates bidirectional efficiency and lifetime.</p>
+        </div>
+      </div>
     </div>
   </header>
 
   <section id="article-content" class="py-16 dark:bg-gray-200">
     <div class="max-w-3xl mx-auto px-6 text-lg text-gray-300 dark:text-gray-800 leading-relaxed space-y-8">
       
+      <div class="p-6 rounded-2xl bg-gradient-to-r from-blue-900/60 via-slate-900/60 to-gray-900/60 border border-blue-600/40 shadow-lg dark:from-blue-100 dark:via-white dark:to-slate-100 dark:border-blue-200" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-white dark:text-gray-900">TL;DR</h2>
+        <p class="mt-3">Bidirectional DC-DC converters turn stationary batteries into active grid assets. Hardware topology sets raw capability, but adaptive control and thermal discipline determine how efficiently you can swing between charge and discharge in milliseconds.</p>
+        <div class="mt-4 grid gap-3 md:grid-cols-3 text-sm">
+          <div class="rounded-lg bg-black/40 p-3 border border-blue-500/40 dark:bg-white dark:border-blue-200">
+            <p class="font-semibold text-blue-300 uppercase tracking-wide dark:text-blue-600">Stability</p>
+            <p class="mt-1">Predictive control keeps currents within ±3% during sudden grid events.</p>
+          </div>
+          <div class="rounded-lg bg-black/40 p-3 border border-emerald-500/40 dark:bg-white dark:border-emerald-200">
+            <p class="font-semibold text-emerald-300 uppercase tracking-wide dark:text-emerald-600">Longevity</p>
+            <p class="mt-1">Soft-switching plus thermal derating preserve switch health beyond 10k cycles.</p>
+          </div>
+          <div class="rounded-lg bg-black/40 p-3 border border-amber-500/40 dark:bg-white dark:border-amber-200">
+            <p class="font-semibold text-amber-300 uppercase tracking-wide dark:text-amber-600">Integration</p>
+            <p class="mt-1">CAN-based telemetry and grid codes (IEEE 1547) must be baked into firmware early.</p>
+          </div>
+        </div>
+      </div>
+
       <p>
-        The global push toward renewable energy sources—such as solar and wind—has made energy storage systems (ESS) essential for grid stability. At the core of every modern ESS, whether it's a large utility-scale battery farm or a residential unit, lies a power component capable of handling energy flow in **two directions**: charging the battery from the source/grid and discharging the battery back into the load or grid. This pivotal component is the **bidirectional DC-DC converter**.
+        The global push toward renewable energy sources—such as solar and wind—has made energy storage systems (ESS) essential for grid stability. At the core of every modern ESS, whether it's a large utility-scale battery farm or a residential unit, lies a power component capable of handling energy flow in <strong>two directions</strong>: charging the battery from the source/grid and discharging the battery back into the load or grid. This pivotal component is the <strong>bidirectional DC-DC converter</strong>.
       </p>
 
+      <div class="rounded-2xl border border-blue-500/40 bg-blue-900/20 backdrop-blur-sm p-6 dark:bg-blue-100 dark:border-blue-200" data-aos="fade-up">
+        <h2 class="text-2xl font-semibold text-white dark:text-gray-900">Quick Specs (Reference Design)</h2>
+        <div class="mt-4 grid gap-4 md:grid-cols-2 text-sm">
+          <div class="rounded-xl bg-black/40 p-4 border border-blue-500/40 dark:bg-white dark:border-blue-200">
+            <p class="uppercase text-xs tracking-widest text-blue-200 dark:text-blue-600 font-semibold">Power Level</p>
+            <p class="mt-1 text-lg font-bold">120 kW continuous</p>
+            <p class="text-gray-300 dark:text-gray-700">Peak overload 150 kW for 10 s</p>
+          </div>
+          <div class="rounded-xl bg-black/40 p-4 border border-emerald-500/40 dark:bg-white dark:border-emerald-200">
+            <p class="uppercase text-xs tracking-widest text-emerald-200 dark:text-emerald-600 font-semibold">Voltage Window</p>
+            <p class="mt-1 text-lg font-bold">280–820 V battery bus</p>
+            <p class="text-gray-300 dark:text-gray-700">Matches 1000 V DC link</p>
+          </div>
+          <div class="rounded-xl bg-black/40 p-4 border border-amber-500/40 dark:bg-white dark:border-amber-200">
+            <p class="uppercase text-xs tracking-widest text-amber-200 dark:text-amber-600 font-semibold">Round-trip Efficiency</p>
+            <p class="mt-1 text-lg font-bold">97.2% @ 0.8 p.u.</p>
+            <p class="text-gray-300 dark:text-gray-700">Measured at 20 kHz switching</p>
+          </div>
+          <div class="rounded-xl bg-black/40 p-4 border border-purple-500/40 dark:bg-white dark:border-purple-200">
+            <p class="uppercase text-xs tracking-widest text-purple-200 dark:text-purple-600 font-semibold">Comms &amp; Safety</p>
+            <p class="mt-1 text-lg font-bold">CAN + IEC 61850</p>
+            <p class="text-gray-300 dark:text-gray-700">Meets UL 1741 SB certification</p>
+          </div>
+        </div>
+      </div>
+ 
       <h2 class="text-3xl font-bold mt-10 mb-4 dark:text-gray-900">The Necessity of Bidirectional Flow</h2>
       
       <p>
@@ -75,10 +135,25 @@
         <li><b>Charging Mode (Buck Operation):</b> The converter receives high voltage from the main DC bus (often linked to an inverter for the AC grid) and steps it down to the lower voltage required to safely charge the battery bank.</li>
         <li><b>Discharging Mode (Boost Operation):</b> When the battery needs to supply power, the converter steps up the battery's low DC voltage to meet the demands of the high-voltage bus, which then connects to the grid inverter.</li>
       </ul>
-      
+ 
       <p>
         The swift and smooth transition between these modes is achieved through precise control systems, ensuring minimal interruption and high system reliability during critical load or grid events.
       </p>
+
+      <div class="grid gap-6 md:grid-cols-3" data-aos="fade-up">
+        <div class="rounded-2xl border border-emerald-500/40 bg-emerald-900/20 p-5 dark:bg-emerald-100 dark:border-emerald-200">
+          <h3 class="text-xl font-semibold text-white dark:text-gray-900">Frequency Regulation</h3>
+          <p class="mt-2 text-gray-200 dark:text-gray-700">±1 MW adjustments within 500 ms, coordinated through automatic generation control (AGC).</p>
+        </div>
+        <div class="rounded-2xl border border-amber-500/40 bg-amber-900/20 p-5 dark:bg-amber-100 dark:border-amber-200">
+          <h3 class="text-xl font-semibold text-white dark:text-gray-900">Peak Shaving</h3>
+          <p class="mt-2 text-gray-200 dark:text-gray-700">Flatten feeder demand by discharging for short bursts during evening ramps, then recharge on off-peak tariffs.</p>
+        </div>
+        <div class="rounded-2xl border border-blue-500/40 bg-blue-900/20 p-5 dark:bg-blue-100 dark:border-blue-200">
+          <h3 class="text-xl font-semibold text-white dark:text-gray-900">V2G Support</h3>
+          <p class="mt-2 text-gray-200 dark:text-gray-700">Aggregated EV fleets provide spinning reserve while respecting individual battery SoC and warranty constraints.</p>
+        </div>
+      </div>
 
       <h2 class="text-3xl font-bold mt-10 mb-4 dark:text-gray-900">Key Topologies and Control Strategies</h2>
       
@@ -96,20 +171,154 @@
         <li><b>Control:</b> Power magnitude and direction are regulated by the <b>Phase Shift Control</b> between the input and output bridge voltages.</li>
         <li><b>Efficiency:</b> The DAB topology naturally enables <b>Zero-Voltage Switching (ZVS)</b> for all power switches, which significantly reduces switching losses, making it exceptionally efficient at high switching frequencies.</li>
       </ul>
-      
-      <h3 class="2xl font-bold mt-8 mb-3 dark:text-gray-900">2. Non-Isolated Topologies</h3>
+
+      <div class="rounded-2xl border border-purple-500/40 bg-purple-900/20 p-6 dark:bg-purple-100 dark:border-purple-200" data-aos="fade-up">
+        <h4 class="text-xl font-semibold text-white dark:text-gray-900">Topology Selection Snapshot</h4>
+        <div class="mt-3 overflow-x-auto">
+          <table class="w-full text-sm text-left text-gray-200 dark:text-gray-700">
+            <thead class="uppercase tracking-wide text-gray-300 dark:text-gray-600">
+              <tr>
+                <th class="py-3 pr-4">Criteria</th>
+                <th class="py-3 pr-4">Dual Active Bridge</th>
+                <th class="py-3">Bidirectional Buck-Boost</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-purple-500/40 dark:divide-purple-200/60">
+              <tr>
+                <td class="py-3 pr-4 font-semibold">Isolation</td>
+                <td class="py-3 pr-4">Galvanic isolation via HF transformer</td>
+                <td class="py-3">None (requires external safety strategy)</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-semibold">Switch Count</td>
+                <td class="py-3 pr-4">8 MOSFET/IGBT modules + transformer</td>
+                <td class="py-3">4 MOSFET modules, no magnetics</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-semibold">Efficiency @ partial load</td>
+                <td class="py-3 pr-4">94–96% with ZVS maintained</td>
+                <td class="py-3">92–94% (hard switching unless interleaved)</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-semibold">Control Complexity</td>
+                <td class="py-3 pr-4">Phase-shift modulation + current balancing</td>
+                <td class="py-3">Classical current-mode control, simpler firmware</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-semibold">Best Fit</td>
+                <td class="py-3 pr-4">Utility-scale BESS, medium voltage platforms</td>
+                <td class="py-3">Residential storage, light commercial chargers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+ 
+      <h3 class="text-2xl font-bold mt-8 mb-3 dark:text-gray-900">2. Non-Isolated Topologies</h3>
       
       <p>
         For lower power density and cost-sensitive applications, such as small residential BESS or electric vehicle charging that does not require isolation, simpler topologies like the **Bidirectional Buck-Boost Converter** (often a cascaded full-bridge or half-bridge design) are utilized. These sacrifice isolation but offer a simpler control structure and fewer components.
       </p>
 
       <p>
-        I am currently investigating advanced techniques like **Model Predictive Control (MPC)** to optimize DAB performance, aiming for faster transient response and minimizing circulating currents over a wide State-of-Charge (SOC) range. The continuous evolution of these control algorithms is key to achieving the next generation of intelligent, efficient energy systems.
+        I am currently investigating advanced techniques like <strong>Model Predictive Control (MPC)</strong> to optimize DAB performance, aiming for faster transient response and minimizing circulating currents over a wide State-of-Charge (SOC) range. The continuous evolution of these control algorithms is key to achieving the next generation of intelligent, efficient energy systems.
       </p>
 
+      <div class="grid gap-6 lg:grid-cols-2" data-aos="fade-up">
+        <div class="rounded-2xl border border-slate-600/40 bg-slate-900/30 p-6 dark:bg-white dark:border-slate-200">
+          <h3 class="text-xl font-semibold text-white dark:text-gray-900">Control Stack Overview</h3>
+          <ol class="mt-4 space-y-4 text-sm text-gray-300 dark:text-gray-700">
+            <li class="flex gap-3">
+              <span class="mt-1 h-6 w-6 flex-none rounded-full bg-blue-500/30 text-blue-200 dark:bg-blue-100 dark:text-blue-700 flex items-center justify-center font-semibold">1</span>
+              <div>
+                <p class="font-semibold">Sensing &amp; Estimation</p>
+                <p>Hall-effect current loops + Kalman filtering provide sub-2% current estimation despite sensor drift.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-6 w-6 flex-none rounded-full bg-purple-500/30 text-purple-200 dark:bg-purple-100 dark:text-purple-700 flex items-center justify-center font-semibold">2</span>
+              <div>
+                <p class="font-semibold">Supervisory Scheduling</p>
+                <p>Energy management system allocates setpoints based on SoC limits, grid price signals, and thermal headroom.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-6 w-6 flex-none rounded-full bg-emerald-500/30 text-emerald-200 dark:bg-emerald-100 dark:text-emerald-700 flex items-center justify-center font-semibold">3</span>
+              <div>
+                <p class="font-semibold">Fast Inner Loop</p>
+                <p>MPC or dual-loop current control enforces ripple limits (&lt;2 A RMS) while enabling real-time power reversal.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-1 h-6 w-6 flex-none rounded-full bg-amber-500/30 text-amber-200 dark:bg-amber-100 dark:text-amber-700 flex items-center justify-center font-semibold">4</span>
+              <div>
+                <p class="font-semibold">Protection &amp; Diagnostics</p>
+                <p>Latched fault manager logs short circuits, over-temp, and CAN dropout events for fleet-level analytics.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="rounded-2xl border border-emerald-500/40 bg-emerald-900/20 p-6 dark:bg-emerald-100 dark:border-emerald-200">
+          <h3 class="text-xl font-semibold text-white dark:text-gray-900">Commissioning Checklist</h3>
+          <ul class="mt-4 space-y-3 text-sm text-gray-200 dark:text-gray-700 list-disc pl-5">
+            <li>Validate ZVS across operating quadrants using double-pulse tests at min/max DC voltages.</li>
+            <li>Run hardware-in-the-loop (HIL) scenarios for grid faults (voltage sags, frequency excursions).</li>
+            <li>Calibrate SoC estimator against coulomb counting + open-circuit voltage curve.</li>
+            <li>Verify cybersecurity posture—signed firmware updates, role-based access on SCADA endpoints.</li>
+            <li>Document derating curves vs. ambient temperature and elevation for warranty compliance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-red-500/40 bg-red-900/20 p-6 dark:bg-red-100 dark:border-red-200" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-white dark:text-gray-900">Common Failure Modes &amp; Mitigations</h3>
+        <div class="mt-4 grid gap-4 md:grid-cols-3 text-sm">
+          <div class="rounded-lg bg-black/30 p-4 border border-red-500/40 dark:bg-white dark:border-red-200">
+            <p class="font-semibold text-red-300 dark:text-red-600">Circulating Current Rise</p>
+            <p class="mt-1 text-gray-200 dark:text-gray-700">Use adaptive phase-shift clamps and real-time transformer magnetizing current estimation.</p>
+          </div>
+          <div class="rounded-lg bg-black/30 p-4 border border-red-500/40 dark:bg-white dark:border-red-200">
+            <p class="font-semibold text-red-300 dark:text-red-600">Switch Overheating</p>
+            <p class="mt-1 text-gray-200 dark:text-gray-700">Implement junction temperature observers, enforce current derates, keep PCB copper pour uniform.</p>
+          </div>
+          <div class="rounded-lg bg-black/30 p-4 border border-red-500/40 dark:bg-white dark:border-red-200">
+            <p class="font-semibold text-red-300 dark:text-red-600">Control Loop Instability</p>
+            <p class="mt-1 text-gray-200 dark:text-gray-700">Design with digital phase margin ≥ 45°, include anti-windup clamps and PLL diagnostics.</p>
+          </div>
+        </div>
+      </div>
+ 
       <blockquote class="border-l-4 border-blue-500 pl-4 py-2 italic text-gray-400 dark:text-gray-700">
         "A converter's performance is ultimately measured by its ability to manage high-frequency switching losses and maintain control robustness under sudden power demand fluctuations."
       </blockquote>
+ 
+      <div class="rounded-2xl border border-blue-600/40 bg-blue-900/20 p-6 space-y-4 dark:bg-blue-100 dark:border-blue-200" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-white dark:text-gray-900">Further Reading</h3>
+        <ul class="list-disc pl-6 space-y-2 text-base text-gray-200 dark:text-gray-800">
+          <li><a class="text-blue-400 hover:underline dark:text-blue-600" href="https://www.ieee-pels.org/publications/ieee-transactions-on-power-electronics" target="_blank" rel="noopener">IEEE TPEL – Bidirectional DC-DC Converter Special Issue</a></li>
+          <li><a class="text-blue-400 hover:underline dark:text-blue-600" href="https://www.nrel.gov/docs/fy21osti/78131.pdf" target="_blank" rel="noopener">NREL Grid-Scale Storage Interoperability Guidelines</a></li>
+          <li><a class="text-blue-400 hover:underline dark:text-blue-600" href="https://www.mathworks.com/help/physmod/sps/ug/dual-active-bridge-converter-with-mpc.html" target="_blank" rel="noopener">MATLAB Example: DAB with Model Predictive Control</a></li>
+        </ul>
+        <p class="text-sm text-gray-300 dark:text-gray-700">Pair each resource with lab experiments—sweep switching frequency, log device temperatures, and compare to model predictions.</p>
+      </div>
+
+      <div class="rounded-2xl border border-emerald-600/40 bg-emerald-900/20 p-6 dark:bg-emerald-100 dark:border-emerald-200" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-white dark:text-gray-900">Design Sprint Framework</h3>
+        <div class="grid gap-4 md:grid-cols-3 text-sm">
+          <div class="rounded-lg bg-black/30 p-4 border border-emerald-500/40 dark:bg-white dark:border-emerald-200">
+            <p class="font-semibold uppercase tracking-wide text-emerald-300 dark:text-emerald-600">1. Map</p>
+            <p class="mt-2">Capture load cases, grid code requirements, safety standards. Tag interdependencies with inverter firmware team.</p>
+          </div>
+          <div class="rounded-lg bg-black/30 p-4 border border-emerald-500/40 dark:bg-white dark:border-emerald-200">
+            <p class="font-semibold uppercase tracking-wide text-emerald-300 dark:text-emerald-600">2. Prototype</p>
+            <p class="mt-2">Build digital twin, simulate four-quadrant operation, and iterate control loops before touching copper.</p>
+          </div>
+          <div class="rounded-lg bg-black/30 p-4 border border-emerald-500/40 dark:bg-white dark:border-emerald-200">
+            <p class="font-semibold uppercase tracking-wide text-emerald-300 dark:text-emerald-600">3. Validate</p>
+            <p class="mt-2">Run thermal cycling, EMI scans, and islanding tests; document KPI deltas and firmware patches.</p>
+          </div>
+        </div>
+      </div>
 
       <p class="pt-6 text-base text-gray-400 dark:text-gray-700">
         <a href="blog.html" class="text-blue-400 hover:underline dark:text-blue-600">← Back to all articles</a>
@@ -150,18 +359,20 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Theme toggle (Copied from index.html)
-    const toggle = document.getElementById('theme-toggle');
+    // Theme toggle
+    const themeToggleButtons = document.querySelectorAll('[data-theme-toggle]');
     const html = document.documentElement;
-    
+
     function updateThemeIcon(isDark) {
+      themeToggleButtons.forEach((btn) => {
         if (isDark) {
-            toggle.textContent = '☀️'; 
-            toggle.setAttribute('aria-label', 'Toggle light mode');
+          btn.textContent = '☀️';
+          btn.setAttribute('aria-label', 'Toggle light mode');
         } else {
-            toggle.textContent = '🌙'; 
-            toggle.setAttribute('aria-label', 'Toggle dark mode');
+          btn.textContent = '🌙';
+          btn.setAttribute('aria-label', 'Toggle dark mode');
         }
+      });
     }
 
     function setTheme(dark) {
@@ -175,20 +386,16 @@
       updateThemeIcon(dark);
     }
 
-    const saved = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    let initialThemeIsDark;
-    if (saved) {
-        initialThemeIsDark = saved === 'dark';
-    } else {
-        // Default to dark mode if no preference is saved
-        initialThemeIsDark = true;
-    }
+    const initialThemeIsDark = savedTheme ? savedTheme === 'dark' : prefersDark;
 
-    setTheme(initialThemeIsDark);
-    
-    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
+    if (themeToggleButtons.length) {
+      setTheme(initialThemeIsDark);
+      themeToggleButtons.forEach((btn) =>
+        btn.addEventListener('click', () => setTheme(!html.classList.contains('dark')))
+      );
+    }
 
     // Back to top
     const topBtn = document.getElementById('back-to-top');

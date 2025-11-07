@@ -5,8 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sourabh K. Joshi | Power Electronics & Data Science Engineer Portfolio</title>
   <meta name="description" content="Electrical Engineer | Power Electronics | Data Science | Chess Enthusiast showcasing work in intelligent energy systems." />
+  <meta name="keywords" content="Power Electronics, Data Science, Electrical Engineering, Battery Systems, Machine Learning, Chess" />
+  <meta name="author" content="Sourabh K. Joshi" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sourabh K. Joshi | Power Electronics & Data Science Engineer" />
+  <meta property="og:description" content="Electrical Engineer | Power Electronics | Data Science | Chess Enthusiast showcasing work in intelligent energy systems." />
+  <meta property="og:url" content="https://sourabhjoshi1.github.io" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sourabh K. Joshi | Power Electronics & Data Science Engineer" />
+  <meta name="twitter:description" content="Electrical Engineer | Power Electronics | Data Science | Chess Enthusiast" />
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://github-readme-stats.vercel.app" />
   
   <link rel="icon" href="https://github.com/Sourabhjoshi1/sourabhjoshi1.github.io/blob/main/favicon/android-chrome-192x192.png?raw=true" type="image/png" />
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sourabh K. Joshi",
+    "jobTitle": "Electrical Engineer",
+    "description": "Power Electronics & Data Science Engineer",
+    "url": "https://sourabhjoshi1.github.io",
+    "sameAs": [
+      "https://github.com/Sourabhjoshi1",
+      "https://linkedin.com/in/sourabhk-nitb",
+      "https://chessdepth.in"
+    ],
+    "email": "joshisourabh47@gmail.com",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "NIT Bhopal, NIT Nagpur"
+    }
+  }
+  </script>
 
   <script>
     tailwind.config = {
@@ -18,14 +58,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900">
+<body class="bg-gray-900 text-white font-sans scroll-smooth transition-colors duration-500 dark:bg-gray-200 dark:text-gray-900" aria-label="Main content">
 
   <div id="loading" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-50 dark:bg-gray-200 transition-opacity duration-500 ease-out">
     <div class="w-12 h-12 border-4 border-gray-700 border-t-blue-500 rounded-full animate-spin dark:border-gray-400 dark:border-t-blue-500"></div>
   </div>
 
   <nav class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow z-50 dark:bg-gray-200/80 dark:shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-3 px-6 gap-4">
       <a href="#hero" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center font-bold text-white shadow">
           SJ
@@ -36,24 +76,27 @@
         </div>
       </a>
 
-      <div class="hidden md:flex space-x-6 text-gray-300 dark:text-gray-700">
-        <a href="#about" class="hover:text-white transition dark:hover:text-gray-900">About</a>
-        <a href="#skills" class="hover:text-white transition dark:hover:text-gray-900">Skills</a>
-        <a href="#work" class="hover:text-white transition dark:hover:text-gray-900">Work</a>
-        <a href="blog.html" class="hover:text-white transition dark:hover:text-gray-900">Blog</a>
-        <a href="#research" class="hover:text-white transition dark:hover:text-gray-900">Research</a>
-        <a href="#contact" class="hover:text-white transition dark:hover:text-gray-900">Contact</a>
-      </div>
+      <nav class="hidden md:flex items-center gap-6 text-gray-300 dark:text-gray-700" aria-label="Main navigation">
+        <a href="#about" class="hover:text-white transition dark:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1">About</a>
+        <a href="#skills" class="hover:text-white transition dark:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1">Skills</a>
+        <a href="#work" class="hover:text-white transition dark:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1">Work</a>
+        <a href="blog.html" class="hover:text-white transition dark:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1">Blog</a>
+        <a href="#research" class="hover:text-white transition dark:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1">Research</a>
+        <a href="#contact" class="hover:text-white transition dark:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1">Contact</a>
+      </nav>
 
       <div class="flex items-center gap-3">
         <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
            target="_blank"
-           class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold shadow hover:bg-blue-700 transition"
-           title="View Resume">
+           rel="noopener noreferrer"
+           class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold shadow hover:bg-blue-700 transition transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500"
+           title="View Resume"
+           aria-label="View Resume">
           📄
         </a>
 
         <button id="theme-toggle"
+                data-theme-toggle
                 class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition dark:bg-gray-300 dark:hover:bg-gray-400 dark:text-gray-900"
                 aria-label="Toggle dark mode">🌙</button>
         
@@ -79,6 +122,11 @@
       <a href="#research" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Research</a>
       <a href="#contact" class="text-white hover:text-blue-400 transition dark:text-gray-900 dark:hover:text-blue-600 mobile-link">Contact</a>
       
+      <button data-theme-toggle
+              class="text-white bg-gray-800/80 border border-gray-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-700 transition dark:bg-white dark:text-gray-900 dark:border-gray-300 dark:hover:bg-gray-100">
+        🌙
+      </button>
+
       <a href="https://drive.google.com/file/d/1vDCxFjpR8_i_j58DK9QtFKfRMieVrqOM/preview"
            target="_blank"
            class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition mt-4">
@@ -87,42 +135,63 @@
     </div>
   </div>
 
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 
+  <section id="hero" class="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 
         bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 
-        pt-24 dark:from-gray-200 dark:to-gray-300">
-    <h1 data-aos="zoom-in" class="text-5xl md:text-6xl font-extrabold mb-4 dark:text-gray-900">Sourabh K. Joshi</h1>
-    <p data-aos="fade-up" class="text-xl md:text-2xl text-gray-300 max-w-2xl dark:text-gray-700">
-      Electrical Engineer (B.Tech, NIT Bhopal) • Power Electronics (M.Tech, NIT Nagpur) • Data Science • Chess Enthusiast
+        pt-28 pb-16 dark:from-gray-200 dark:to-gray-300" aria-label="Hero section">
+    <h1 data-aos="zoom-in" class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight dark:text-gray-900">Sourabh K. Joshi</h1>
+    <p data-aos="fade-up" class="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed dark:text-gray-700">
+      Power electronics engineer blending high-efficiency converter design, data-centric experimentation, and strategic thinking from competitive chess.
     </p>
-    <div class="mt-8 flex gap-4">
-      <a href="#work" class="px-7 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-semibold text-lg text-white">View My Work</a>
-      <a href="#contact" class="px-7 py-3 border border-gray-600 rounded-lg hover:border-blue-400 transition font-semibold text-lg dark:border-gray-400 dark:hover:border-blue-600 dark:text-gray-900">Contact Me</a>
+    <div class="mt-10 flex gap-4 flex-wrap justify-center">
+      <a href="#work" class="px-7 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-semibold text-lg text-white focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">View My Work</a>
+      <a href="#contact" class="px-7 py-3 border border-gray-600 rounded-lg hover:border-blue-400 transition font-semibold text-lg dark:border-gray-400 dark:hover:border-blue-600 dark:text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Contact Me</a>
+    </div>
+ 
+    <div class="mt-12 grid gap-6 md:grid-cols-3 max-w-5xl w-full" data-aos="fade-up" data-aos-delay="100">
+      <div class="rounded-2xl bg-gray-900/70 border border-blue-600/40 p-6 text-left dark:bg-white dark:border-blue-200 dark:text-gray-900">
+        <p class="text-sm uppercase tracking-widest text-blue-300 dark:text-blue-600 font-semibold">Power Platforms</p>
+        <p class="mt-3 text-3xl font-bold text-white dark:text-gray-900">120 kW+</p>
+        <p class="text-sm text-gray-400 mt-2 dark:text-gray-600">Converter prototypes delivered for grid-tied storage and EV fast charging.</p>
+      </div>
+      <div class="rounded-2xl bg-gray-900/70 border border-emerald-600/40 p-6 text-left dark:bg-white dark:border-emerald-200 dark:text-gray-900">
+        <p class="text-sm uppercase tracking-widest text-emerald-300 dark:text-emerald-600 font-semibold">Data & ML</p>
+        <p class="mt-3 text-3xl font-bold text-white dark:text-gray-900">30+ models</p>
+        <p class="text-sm text-gray-400 mt-2 dark:text-gray-600">Battery analytics, predictive maintenance, and optimization pipelines.</p>
+      </div>
+      <div class="rounded-2xl bg-gray-900/70 border border-yellow-500/40 p-6 text-left dark:bg-white dark:border-yellow-200 dark:text-gray-900">
+        <p class="text-sm uppercase tracking-widest text-yellow-300 dark:text-yellow-600 font-semibold">Chess Lens</p>
+        <p class="mt-3 text-3xl font-bold text-white dark:text-gray-900">FIDE Rapid 1834</p>
+        <p class="text-sm text-gray-400 mt-2 dark:text-gray-600">Coaching program founder; strategic thinking drives system trade-offs.</p>
+      </div>
     </div>
 
-    <div class="mt-12 flex gap-8 items-center flex-wrap justify-center">
+    <div class="mt-14 flex gap-8 items-center flex-wrap justify-center">
       <img src="https://github-readme-stats.vercel.app/api?username=Sourabhjoshi1&show_icons=true&hide_border=true&theme=tokyonight"
-           alt="GitHub stats for Sourabhjoshi1" class="rounded-lg shadow-md w-64 md:w-auto" loading="lazy" />
-      <a href="https://www.chess.com/member/sourabhjoshi01" target="_blank" class="text-gray-300 hover:text-blue-400 text-lg font-medium flex items-center gap-2 dark:text-gray-700 dark:hover:text-blue-600">
+           alt="GitHub stats for Sourabhjoshi1" 
+           class="rounded-lg shadow-md w-64 md:w-auto transition-transform hover:scale-105" 
+           loading="lazy"
+           width="495"
+           height="195" />
+      <a href="https://www.chess.com/member/sourabhjoshi01" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="text-gray-300 hover:text-blue-400 text-lg font-medium flex items-center gap-2 dark:text-gray-700 dark:hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 transition">
         ♟ Chess Profile (External)
       </a>
     </div>
   </section>
 
-  <section id="about" class="py-20 max-w-5xl mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-6 dark:text-gray-900" data-aos="fade-right">About Me / Over Mij</h3>
+  <section id="about" class="py-20 max-w-5xl mx-auto px-6" aria-labelledby="about-heading">
+    <h2 id="about-heading" class="text-3xl font-bold mb-6 dark:text-gray-900" data-aos="fade-right">About Me</h2>
     
     <p class="text-lg text-gray-300 leading-relaxed mb-6 dark:text-gray-700" data-aos="fade-up">
       I’m passionate about innovating at the intersection of <b>Power Electronics, Energy Storage Systems, and Data Science</b>. My goal is to design intelligent, efficient energy systems for a sustainable future.
     </p>
-    <p class="text-lg text-gray-400 leading-relaxed mb-6 italic dark:text-gray-600" data-aos="fade-up" data-aos-delay="50">
-      Ik ben gepassioneerd over innovatie op het snijvlak van <b>Vermogenselektronica, Energieopslagsystemen en Datawetenschap</b>. Mijn doel is het ontwerpen van intelligente, efficiënte energiesystemen voor een duurzame toekomst.
+    <p class="text-lg text-gray-400 dark:text-gray-600" data-aos="fade-up" data-aos-delay="120">
+      My toolkit spans wide-bandgap converter design, embedded control, machine learning, and experimentation. I translate performance data into actionable design decisions and love collaborating with multidisciplinary teams.
     </p>
-
-    <p class="text-lg text-gray-400 dark:text-gray-600" data-aos="fade-up" data-aos-delay="150">
-      Beyond engineering, I coach chess and founded <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium dark:text-blue-600 dark:hover:text-blue-500">ChessDepth.in</a>. I enjoy building projects, publishing research, and teaching.
-    </p>
-    <p class="text-lg text-gray-400 italic dark:text-gray-600" data-aos="fade-up" data-aos-delay="200">
-      Naast engineering coach ik schaken en richtte ik <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium dark:text-blue-600 dark:hover:text-blue-500">ChessDepth.in</a> op. Ik geniet van het bouwen van projecten, het publiceren van onderzoek en lesgeven.
+    <p class="text-lg text-gray-400 dark:text-gray-600" data-aos="fade-up" data-aos-delay="180">
+      Outside the lab, I coach chess and founded <a href="https://chessdepth.in" target="_blank" class="text-blue-400 hover:underline font-medium dark:text-blue-600 dark:hover:text-blue-500">ChessDepth.in</a>. Teaching and publishing keep me accountable to clarity—and make every project more fun.
     </p>
     
     <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
@@ -134,9 +203,9 @@
     </div>
   </section>
 
-  <section id="skills" class="py-20 bg-gray-800 px-6 dark:bg-gray-300">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Core Competencies</h3>
+  <section id="skills" class="py-24 bg-gray-800 px-6 dark:bg-gray-300" aria-labelledby="skills-heading">
+    <div class="max-w-7xl mx-auto">
+      <h2 id="skills-heading" class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Core Competencies</h2>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <li data-aos="zoom-in" class="p-6 bg-gray-900 rounded-lg shadow-xl border-t-4 border-blue-500 dark:bg-white dark:text-gray-900">
             <div class="text-4xl mb-2">⚡</div>
@@ -162,90 +231,94 @@
     </div>
   </section>
 
-  <section id="work" class="py-20 px-6 dark:bg-gray-200">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Selected Projects</h3>
+  <section id="work" class="py-24 px-6 dark:bg-gray-200" aria-labelledby="work-heading">
+    <div class="max-w-7xl mx-auto">
+      <h2 id="work-heading" class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Selected Projects</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
           <div>
             <h4 class="text-xl font-semibold mb-2 text-blue-400 dark:text-blue-600">High-Efficiency Converters</h4>
             <p class="text-base text-gray-400 mb-4 dark:text-gray-700">Designed and simulated bidirectional DC-DC converters focusing on <b>high efficiency</b> for grid integration and battery storage systems.</p>
           </div>
-          <a href="#" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded-md text-center hover:bg-blue-700 transition mt-2">Explore (Simulations/Paper)</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-white bg-blue-600 px-4 py-2 rounded-md text-center hover:bg-blue-700 transition mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transform hover:scale-105 inline-block">Explore (Simulations/Paper)</a>
         </div>
         <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
           <div>
             <h4 class="text-xl font-semibold mb-2 text-purple-400 dark:text-purple-600">AI in Energy Systems</h4>
             <p class="text-base text-gray-400 mb-4 dark:text-gray-700">Built <b>AI-driven models</b> for sustainable energy forecasting and intelligent battery health management to enhance overall system efficiency and lifespan.</p>
           </div>
-          <a href="#" target="_blank" class="text-sm text-white bg-purple-600 px-4 py-2 rounded-md text-center hover:bg-purple-700 transition mt-2">View Code/Model (GitHub)</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-white bg-purple-600 px-4 py-2 rounded-md text-center hover:bg-purple-700 transition mt-2 focus:outline-none focus:ring-2 focus:ring-purple-500 transform hover:scale-105 inline-block">View Code/Model (GitHub)</a>
         </div>
         <div data-aos="fade-up" data-aos-delay="200" class="p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 dark:bg-white dark:border-gray-300">
           <div>
             <h4 class="text-xl font-semibold mb-2 text-yellow-400 dark:text-yellow-600">ChessDepth Academy</h4>
             <p class="text-base text-gray-400 mb-4 dark:text-gray-700">Founded <b>ChessDepth.in</b>, a platform dedicated to coaching beginner to intermediate <b>chess learners</b> worldwide using structured curriculum.</p>
           </div>
-          <a href="https://chessdepth.in" target="_blank" class="text-sm text-white bg-yellow-600 px-4 py-2 rounded-md text-center hover:bg-yellow-700 transition mt-2">Visit Website</a>
+          <a href="https://chessdepth.in" target="_blank" rel="noopener noreferrer" class="text-sm text-white bg-yellow-600 px-4 py-2 rounded-md text-center hover:bg-yellow-700 transition mt-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 transform hover:scale-105 inline-block">Visit Website</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="research" class="py-20 bg-gray-900 px-6 dark:bg-gray-200">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Research & Publications</h3>
+  <section id="research" class="py-24 bg-gray-900 px-6 dark:bg-gray-200" aria-labelledby="research-heading">
+    <div class="max-w-7xl mx-auto">
+      <h2 id="research-heading" class="text-3xl font-bold mb-10 text-center dark:text-gray-900" data-aos="fade-up">Research & Publications</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div data-aos="fade-up" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 dark:bg-white dark:border-gray-300">
           <h4 class="text-xl font-semibold text-blue-400 mb-2 dark:text-blue-600">AI-Based SOC & SOH Estimation for Li-ion Batteries</h4>
           <p class="text-base text-gray-400 mt-2 mb-3 dark:text-gray-700">Combines deep learning with Bio-Inspired Algorithms for robust <b>State-of-Charge (SOC) & State-of-Health (SOH) estimation</b>.</p>
-          <a href="/path/to/battery_paper.pdf" target="_blank" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">Read Preprint →</a>
+          <a href="/path/to/battery_paper.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1 inline-block">Read Preprint →</a>
         </div>
         <div data-aos="fade-up" data-aos-delay="100" class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 dark:bg-white dark:border-gray-300">
           <h4 class="text-xl font-semibold text-blue-400 mb-2 dark:text-blue-600">Dog-Inspired Gradual Exploration Algorithm (DiGEA)</h4>
           <p class="text-base text-gray-400 mt-2 mb-3 dark:text-gray-700">Novel <b>metaheuristic optimization algorithm</b> inspired by canine exploration patterns for solving complex engineering problems.</p>
-          <a href="https://github.com/Sourabhjoshi1/DiGEA" target="_blank" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500">View Repository →</a>
+          <a href="https://github.com/Sourabhjoshi1/DiGEA" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-400 hover:underline dark:text-blue-600 dark:hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1 inline-block">View Repository →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-20 px-6 dark:bg-gray-200">
+  <section id="contact" class="py-24 px-6 dark:bg-gray-200" aria-labelledby="contact-heading">
     <div class="max-w-xl mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center dark:text-gray-900" data-aos="fade-up">Get in Touch / Neem Contact Op</h3>
+      <h2 id="contact-heading" class="text-3xl font-bold mb-6 text-center dark:text-gray-900" data-aos="fade-up">Let’s Build Something</h2>
       <p class="text-lg text-gray-300 mb-8 text-center dark:text-gray-700" data-aos="fade-up">
-        Let’s collaborate on research, projects, or chess training! Send me a message below. 
-        <span class="block mt-1">Laten we samenwerken aan onderzoek, projecten of schaaktraining! Stuur me hieronder een bericht.</span>
+        Whether you’re shipping power hardware, scaling analytics, or exploring chess strategy, I’m always up for a thoughtful conversation. Drop a note and I’ll respond quickly.
       </p>
 
       <form action="YOUR_FORMSPREE_EMAIL_OR_ENDPOINT" 
             method="POST" 
             class="space-y-6 p-6 bg-gray-900 rounded-xl shadow-2xl dark:bg-white dark:shadow-lg" 
-            data-aos="fade-up" data-aos-delay="100">
+            data-aos="fade-up" data-aos-delay="100"
+            id="contact-form"
+            novalidate>
 
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Full Name / Volledige Naam</label>
+          <label for="name" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Full Name</label>
           <input type="text" id="name" name="name" required
                  class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 transition duration-150 dark:bg-gray-100 dark:border-gray-400 dark:text-gray-900 dark:placeholder-gray-500"
-                 placeholder="John Doe / Jan Jansen">
+                 placeholder="Your name">
         </div>
 
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Email Address / E-mailadres</label>
+          <label for="email" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Email Address</label>
           <input type="email" id="email" name="_replyto" required
                  class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 transition duration-150 dark:bg-gray-100 dark:border-gray-400 dark:text-gray-900 dark:placeholder-gray-500"
-                 placeholder="uwnaam@voorbeeld.com">
+                 placeholder="you@example.com">
         </div>
 
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Message / Bericht</label>
+          <label for="message" class="block text-sm font-medium text-gray-300 dark:text-gray-700">Message</label>
           <textarea id="message" name="message" rows="4" required
                     class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 transition duration-150 dark:bg-gray-100 dark:border-gray-400 dark:text-gray-900 dark:placeholder-gray-500"
-                    placeholder="I'd love to collaborate on... / Ik zou graag willen samenwerken aan..."></textarea>
+                    placeholder="I’d love to collaborate on..."></textarea>
         </div>
 
+        <div id="form-message" class="hidden text-sm rounded-lg p-3 mb-4" role="alert" aria-live="polite"></div>
+        
         <button type="submit"
-                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150">
-          Send Message / Bericht Verzenden
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
+          <span id="submit-text">Send Message</span>
+          <span id="submit-spinner" class="hidden ml-2">⏳</span>
         </button>
       </form>
 
@@ -254,19 +327,29 @@
   </section>
 
   
-  <footer class="py-10 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
-    <div class="max-w-6xl mx-auto px-6">
+  <footer class="py-12 bg-gray-800 text-center text-gray-400 dark:bg-gray-300 dark:text-gray-700">
+    <div class="max-w-7xl mx-auto px-6">
         
         <div class="flex justify-center space-x-6 mb-4">
-            <a href="https://linkedin.com/in/sourabhk-nitb" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/sourabhk-nitb" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-2" 
+               aria-label="LinkedIn">
                 <span class="sr-only">LinkedIn</span>
                 🔗
             </a>
-            <a href="https://github.com/Sourabhjoshi1" target="_blank" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="GitHub">
+            <a href="https://github.com/Sourabhjoshi1" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-2" 
+               aria-label="GitHub">
                 <span class="sr-only">GitHub</span>
                 🐙
             </a>
-            <a href="mailto:joshisourabh47@gmail.com" class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl" aria-label="Email">
+            <a href="mailto:joshisourabh47@gmail.com" 
+               class="text-gray-400 hover:text-blue-400 dark:hover:text-blue-600 transition text-3xl transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-2" 
+               aria-label="Email">
                 <span class="sr-only">Email</span>
                 📧
             </a>
@@ -281,48 +364,43 @@
     </div>
   </footer>
 
-  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition" aria-label="Back to top">↑ Top</button>
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-600 z-40 transform hover:scale-110 active:scale-95" aria-label="Back to top">↑ Top</button>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     // Theme toggle
-    const toggle = document.getElementById('theme-toggle');
+    const themeToggleButtons = document.querySelectorAll('[data-theme-toggle]');
     const html = document.documentElement;
-    
+
     function updateThemeIcon(isDark) {
+      themeToggleButtons.forEach((btn) => {
         if (isDark) {
-            toggle.textContent = '☀️'; 
-            toggle.setAttribute('aria-label', 'Toggle light mode');
+          btn.textContent = '☀️';
+          btn.setAttribute('aria-label', 'Toggle light mode');
         } else {
-            toggle.textContent = '🌙'; 
-            toggle.setAttribute('aria-label', 'Toggle dark mode');
+          btn.textContent = '🌙';
+          btn.setAttribute('aria-label', 'Toggle dark mode');
         }
+      });
     }
 
     function setTheme(dark) {
-      if (dark) {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
+      html.classList.toggle('dark', dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
       updateThemeIcon(dark);
     }
 
-    const saved = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    let initialThemeIsDark;
-    if (saved) {
-        initialThemeIsDark = saved === 'dark';
-    } else {
-        initialThemeIsDark = true;
-    }
+    const initialThemeIsDark = savedTheme ? savedTheme === 'dark' : prefersDark;
 
     setTheme(initialThemeIsDark);
-    
-    toggle.onclick = () => setTheme(!html.classList.contains('dark'));
+
+    themeToggleButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        setTheme(!html.classList.contains('dark'));
+      });
+    });
 
     // Mobile Menu Toggle Logic
     const menuButton = document.getElementById('mobile-menu-button');
@@ -374,6 +452,183 @@
         }
     });
 
+    // Form validation and submission handling
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const submitText = document.getElementById('submit-text');
+    const submitSpinner = document.getElementById('submit-spinner');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    // Real-time validation
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    function showError(input, message) {
+        input.classList.add('border-red-500', 'ring-2', 'ring-red-500');
+        input.classList.remove('border-gray-700', 'dark:border-gray-400');
+        const errorMsg = input.parentElement.querySelector('.error-message');
+        if (errorMsg) {
+            errorMsg.textContent = message;
+        } else {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message text-red-400 text-xs mt-1';
+            errorDiv.textContent = message;
+            input.parentElement.appendChild(errorDiv);
+        }
+    }
+
+    function clearError(input) {
+        input.classList.remove('border-red-500', 'ring-2', 'ring-red-500');
+        input.classList.add('border-gray-700', 'dark:border-gray-400');
+        const errorMsg = input.parentElement.querySelector('.error-message');
+        if (errorMsg) {
+            errorMsg.remove();
+        }
+    }
+
+    nameInput.addEventListener('blur', () => {
+        if (nameInput.value.trim().length < 2) {
+            showError(nameInput, 'Name must be at least 2 characters');
+        } else {
+            clearError(nameInput);
+        }
+    });
+
+    emailInput.addEventListener('blur', () => {
+        if (!validateEmail(emailInput.value)) {
+            showError(emailInput, 'Please enter a valid email address');
+        } else {
+            clearError(emailInput);
+        }
+    });
+
+    messageInput.addEventListener('blur', () => {
+        if (messageInput.value.trim().length < 10) {
+            showError(messageInput, 'Message must be at least 10 characters');
+        } else {
+            clearError(messageInput);
+        }
+    });
+
+    // Form submission
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Clear previous messages
+        formMessage.classList.add('hidden');
+        formMessage.classList.remove('bg-green-500', 'bg-red-500', 'text-white');
+        
+        // Validate all fields
+        let isValid = true;
+        
+        if (nameInput.value.trim().length < 2) {
+            showError(nameInput, 'Name must be at least 2 characters');
+            isValid = false;
+        }
+        
+        if (!validateEmail(emailInput.value)) {
+            showError(emailInput, 'Please enter a valid email address');
+            isValid = false;
+        }
+        
+        if (messageInput.value.trim().length < 10) {
+            showError(messageInput, 'Message must be at least 10 characters');
+            isValid = false;
+        }
+        
+        if (!isValid) {
+            formMessage.textContent = 'Please fix the errors above';
+            formMessage.classList.remove('hidden');
+            formMessage.classList.add('bg-red-500', 'text-white');
+            return;
+        }
+        
+        // Disable submit button and show spinner
+        submitButton.disabled = true;
+        submitText.textContent = 'Sending...';
+        submitSpinner.classList.remove('hidden');
+        
+        try {
+            // Note: Replace with your actual form endpoint
+            const formAction = contactForm.action;
+            if (formAction === 'YOUR_FORMSPREE_EMAIL_OR_ENDPOINT') {
+                // Simulate form submission for demo
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                formMessage.textContent = 'Form submission endpoint not configured. Please update the form action attribute.';
+                formMessage.classList.remove('hidden');
+                formMessage.classList.add('bg-yellow-500', 'text-white');
+            } else {
+                const formData = new FormData(contactForm);
+                const response = await fetch(formAction, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    formMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('bg-green-500', 'text-white');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }
+        } catch (error) {
+            formMessage.textContent = 'Failed to send message. Please try again or contact me directly via email.';
+            formMessage.classList.remove('hidden');
+            formMessage.classList.add('bg-red-500', 'text-white');
+        } finally {
+            submitButton.disabled = false;
+            submitText.textContent = 'Send Message';
+            submitSpinner.classList.add('hidden');
+        }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '#!') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Keyboard navigation improvements
+    document.addEventListener('keydown', (e) => {
+        // Close mobile menu on Escape key
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('-translate-x-full')) {
+            toggleMobileMenu();
+        }
+        
+        // Skip to main content with Alt+S (accessibility)
+        if (e.altKey && e.key === 's') {
+            e.preventDefault();
+            const mainContent = document.querySelector('main') || document.querySelector('#hero');
+            if (mainContent) {
+                mainContent.focus();
+                mainContent.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+
   </script>
 </body>
 </html>
+
