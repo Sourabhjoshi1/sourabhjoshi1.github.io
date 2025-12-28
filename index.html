@@ -4,197 +4,188 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sourabh Joshi</title>
-  <meta name="description" content="Sourabh Joshi – Power Electronics Researcher" />
+  <meta name="description" content="Sourabh Joshi – Electrical Engineering, Power Electronics" />
 
   <style>
     :root {
-      --bg: #ffffff;
-      --fg: #111827;      /* near-black */
-      --muted: #4b5563;   /* gray-600 */
-      --accent: #2563eb;  /* classic blue */
-      --line: #e5e7eb;    /* light gray */
+      --bg: #000000;
+      --fg: #f3f4f6;
+      --muted: #9ca3af;
+      --line: #1f2937;
+      --accent: #93c5fd;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: "Times New Roman", Georgia, serif;
       background: var(--bg);
       color: var(--fg);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
+    /* ---------- NAV ---------- */
     header {
       border-bottom: 1px solid var(--line);
-      padding: 1.5rem 1rem;
+      padding: 1.2rem 1rem;
     }
 
-    .header-inner {
-      max-width: 860px;
+    .nav {
+      max-width: 960px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
     }
 
-    header h1 {
-      font-size: 1.8rem;
+    .nav h1 {
+      font-size: 1.6rem;
       font-weight: 700;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.05em;
     }
 
-    nav a {
-      margin-left: 1.25rem;
+    .nav a {
+      margin-left: 1.5rem;
       text-decoration: none;
       color: var(--fg);
       font-size: 0.95rem;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .nav a:hover { text-decoration: underline; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      max-width: 960px;
+      margin: 5rem auto 6rem;
+      padding: 0 1rem;
+      text-align: center;
     }
 
+    .hero h2 {
+      font-size: clamp(2.5rem, 5vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      max-width: 65ch;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    /* ---------- CONTENT ---------- */
     main {
       max-width: 860px;
-      margin: 3rem auto;
+      margin: 0 auto 6rem;
       padding: 0 1rem;
     }
 
     section {
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
     }
 
-    h2 {
+    h3 {
       font-size: 1.2rem;
-      margin-bottom: 0.8rem;
-      font-weight: 700;
+      margin-bottom: 1rem;
     }
 
-    p {
-      max-width: 70ch;
-      margin-bottom: 0.8rem;
-    }
+    p { margin-bottom: 1rem; }
 
     ul {
       list-style: disc;
       margin-left: 1.2rem;
     }
 
-    li {
-      margin-bottom: 0.5rem;
+    li { margin-bottom: 0.5rem; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 3rem 1rem;
+      color: var(--muted);
     }
 
-    .cv-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.35rem 0.9rem;
-      border: 1px solid var(--fg);
-      text-decoration: none;
-      color: var(--fg);
+    .footer {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
       font-size: 0.9rem;
     }
 
-    .cv-button:hover {
-      background: var(--fg);
-      color: #fff;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 1.5rem 1rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .footer-inner a {
+    .footer a {
       color: var(--muted);
       text-decoration: none;
-      margin-left: 1rem;
+      margin: 0 0.75rem;
     }
 
-    .footer-inner a:hover {
-      text-decoration: underline;
-    }
+    .footer a:hover { text-decoration: underline; }
+
   </style>
 </head>
 <body>
 
 <header>
-  <div class="header-inner">
+  <div class="nav">
     <h1>Sourabh Joshi</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#chess">Chess</a>
-      <a href="Sourabh_Joshi_CV.pdf" class="cv-button">CV (PDF)</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="chess.html">Chess</a>
+      <a href="Sourabh_Joshi_CV.pdf">CV</a>
     </nav>
   </div>
 </header>
 
+<section class="hero">
+  <h2>Hi, I’m Sourabh</h2>
+  <p>
+    M.Tech student in Electrical Engineering (Power Electronics), interested in energy
+    systems, basic sciences, philosophy, languages, and the long-term technological
+    implications for humanity.
+  </p>
+</section>
+
 <main>
 
-  <section id="about">
-    <h2>About</h2>
+  <section>
+    <h3>Focus</h3>
     <p>
-      I am a Master’s student in Power Electronics and Drives, working on high-efficiency
-      DC–DC converters, battery management systems, and AI-based State-of-Charge and
-      State-of-Health estimation. I aim to pursue a PhD and contribute long-term,
-      foundational research in energy systems.
+      My technical work centers on power electronics, renewable energy, and battery
+      energy storage systems. I am particularly interested in how these systems scale
+      over decades and reshape society.
     </p>
   </section>
 
-  <section id="research">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>DC–DC converters and high-efficiency power stages</li>
-      <li>Bidirectional converters for battery energy storage</li>
-      <li>Battery Management Systems (BMS)</li>
-      <li>AI-based SoC / SoH estimation</li>
-      <li>Control of power electronic systems</li>
-    </ul>
-  </section>
-
   <section>
-    <h2>Selected Work</h2>
-    <ul>
-      <li>High-efficiency bidirectional DC–DC converter for battery applications</li>
-      <li>AI-based State-of-Health estimation of Li-ion batteries</li>
-      <li>Presented research at IEEE STPEC 2025 Conference</li>
-    </ul>
-  </section>
-
-  <section id="chess">
-    <h2>Chess</h2>
+    <h3>Background</h3>
     <p>
-      I am a FIDE-rated chess player and coach, running an online academy focused on
-      structured improvement for developing players. My teaching emphasizes positional
-      understanding and disciplined thinking.
+      Alongside engineering, I have a strong background in chess as a FIDE-rated player
+      and coach, which deeply influences my structured and long-term approach to
+      problem-solving.
+    </p>
+    <p>
+      I speak English and am actively learning Dutch (Nederlands).
+    </p>
+    <p style="font-style: italic; color: var(--muted);">
+      “Om te slagen in het leven heb je twee dingen nodig: onwetendheid en vertrouwen.”
     </p>
   </section>
 
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <div>© 2025 Sourabh Joshi</div>
-    <div>
-      <a href="mailto:joshisourabh47@gmail.com">Email</a>
-      <a href="https://github.com/Sourabhjoshi1" target="_blank">GitHub</a>
+  <div class="footer">
+    <p>I prefer email, but you can also find me elsewhere.</p>
+    <p>
+      <a href="mailto:joshisourabh47@gmail.com">Email</a> ·
+      <a href="https://github.com/Sourabhjoshi1" target="_blank">GitHub</a> ·
       <a href="https://chessdepth.in" target="_blank">Chess Academy</a>
-    </div>
+    </p>
+    <p style="margin-top:1.5rem;">© 2025 Sourabh Joshi</p>
   </div>
 </footer>
 
 </body>
 </html>
-
