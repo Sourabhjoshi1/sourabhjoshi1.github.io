@@ -3,192 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sourabh Joshi | Power Electronics & Research</title>
-  <meta name="description" content="Sourabh Joshi – Power Electronics Researcher, BMS & DC-DC Converters, Chess Coach" />
+  <title>Sourabh Joshi</title>
+  <meta name="description" content="Sourabh Joshi – Power Electronics Researcher" />
 
   <style>
     :root {
-      --bg: #020617;        /* deep slate */
-      --fg: #e5e7eb;        /* gray-200 */
-      --muted: #9ca3af;     /* gray-400 */
-      --accent: #38bdf8;    /* sky-400 */
-      --card: #020617;
+      --bg: #ffffff;
+      --fg: #111827;      /* near-black */
+      --muted: #4b5563;   /* gray-600 */
+      --accent: #2563eb;  /* classic blue */
+      --line: #e5e7eb;    /* light gray */
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 20% 0%, #020617 40%, #020617 100%);
+      font-family: "Times New Roman", Georgia, serif;
+      background: var(--bg);
       color: var(--fg);
       line-height: 1.65;
     }
 
-    main {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 4rem 1.5rem;
-    }
-
-    .container {
-      max-width: 900px;
-      width: 100%;
-    }
-
     header {
-      margin-bottom: 4rem;
+      border-bottom: 1px solid var(--line);
+      padding: 1.5rem 1rem;
     }
 
-    h1 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
       font-weight: 700;
-      letter-spacing: -0.03em;
+      letter-spacing: 0.02em;
     }
 
-    h2 {
-      margin-top: 0.75rem;
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--muted);
+    nav a {
+      margin-left: 1.25rem;
+      text-decoration: none;
+      color: var(--fg);
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
 
     section {
-      margin-top: 4rem;
+      margin-bottom: 3.5rem;
     }
 
-    h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
     }
 
     p {
       max-width: 70ch;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     ul {
-      list-style: none;
-      margin-top: 1rem;
+      list-style: disc;
+      margin-left: 1.2rem;
     }
 
     li {
-      margin-bottom: 0.6rem;
-      color: var(--fg);
+      margin-bottom: 0.5rem;
     }
 
-    li span {
-      color: var(--muted);
-    }
-
-    .links {
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-    }
-
-    a {
-      color: var(--accent);
+    .cv-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid var(--fg);
       text-decoration: none;
-      font-weight: 500;
+      color: var(--fg);
+      font-size: 0.9rem;
     }
 
-    a:hover { text-decoration: underline; }
+    .cv-button:hover {
+      background: var(--fg);
+      color: #fff;
+    }
 
     footer {
-      margin-top: 5rem;
-      padding-top: 2rem;
-      border-top: 1px solid #020617;
-      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+      padding: 1.5rem 1rem;
+      font-size: 0.85rem;
       color: var(--muted);
     }
 
-    .pill {
-      display: inline-block;
-      padding: 0.3rem 0.7rem;
-      border: 1px solid #020617;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      margin-right: 0.5rem;
-      margin-top: 0.5rem;
+    .footer-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .footer-inner a {
       color: var(--muted);
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<main>
-  <div class="container">
-
-    <header>
-      <h1>Sourabh Joshi</h1>
-      <h2>Power Electronics Researcher · Battery Systems · Chess Coach</h2>
-
-      <div class="links">
-        <a href="mailto:joshisourabh47@gmail.com">Email</a>
-        <a href="https://github.com/Sourabhjoshi1" target="_blank">GitHub</a>
-        <a href="https://chessdepth.in" target="_blank">Chess Academy</a>
-        <a href="https://www.fide.com" target="_blank">FIDE Profile</a>
-      </div>
-    </header>
-
-    <section>
-      <h3>About</h3>
-      <p>
-        I am a Master’s student in Power Electronics and Drives with a strong focus on
-        high-efficiency DC-DC converters, battery management systems (BMS), and
-        AI-based State-of-Charge (SoC) and State-of-Health (SoH) estimation.
-        My long-term goal is to pursue a PhD and contribute impactful research
-        at the intersection of power electronics, energy storage, and intelligent systems.
-      </p>
-    </section>
-
-    <section>
-      <h3>Research & Technical Interests</h3>
-      <div class="pill">DC-DC Converters</div>
-      <div class="pill">Battery Management Systems</div>
-      <div class="pill">Bidirectional Converters</div>
-      <div class="pill">AI for Energy Systems</div>
-      <div class="pill">SoC / SoH Estimation</div>
-      <div class="pill">Power Electronics Control</div>
-    </section>
-
-    <section>
-      <h3>Selected Work</h3>
-      <ul>
-        <li>
-          <strong>High-Efficiency Bidirectional DC-DC Converter</strong><br />
-          <span>Design and analysis for battery energy storage applications.</span>
-        </li>
-        <li>
-          <strong>AI-Based SoH Estimation for Li-ion Batteries</strong><br />
-          <span>Time-series modeling and machine learning for degradation prediction.</span>
-        </li>
-        <li>
-          <strong>IEEE STPEC Conference</strong><br />
-          <span>Presented research and engaged with international power electronics community.</span>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Chess</h3>
-      <p>
-        I am a FIDE-rated chess player and coach, currently running an online academy
-        focused on structured improvement for sub-1800 players.
-        My teaching emphasizes positional understanding, long-term planning,
-        and disciplined thinking.
-      </p>
-    </section>
-
-    <footer>
-      © 2025 Sourabh Joshi · Built with clarity and intent
-    </footer>
-
+<header>
+  <div class="header-inner">
+    <h1>Sourabh Joshi</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#chess">Chess</a>
+      <a href="Sourabh_Joshi_CV.pdf" class="cv-button">CV (PDF)</a>
+    </nav>
   </div>
+</header>
+
+<main>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a Master’s student in Power Electronics and Drives, working on high-efficiency
+      DC–DC converters, battery management systems, and AI-based State-of-Charge and
+      State-of-Health estimation. I aim to pursue a PhD and contribute long-term,
+      foundational research in energy systems.
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>DC–DC converters and high-efficiency power stages</li>
+      <li>Bidirectional converters for battery energy storage</li>
+      <li>Battery Management Systems (BMS)</li>
+      <li>AI-based SoC / SoH estimation</li>
+      <li>Control of power electronic systems</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Selected Work</h2>
+    <ul>
+      <li>High-efficiency bidirectional DC–DC converter for battery applications</li>
+      <li>AI-based State-of-Health estimation of Li-ion batteries</li>
+      <li>Presented research at IEEE STPEC 2025 Conference</li>
+    </ul>
+  </section>
+
+  <section id="chess">
+    <h2>Chess</h2>
+    <p>
+      I am a FIDE-rated chess player and coach, running an online academy focused on
+      structured improvement for developing players. My teaching emphasizes positional
+      understanding and disciplined thinking.
+    </p>
+  </section>
+
 </main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 Sourabh Joshi</div>
+    <div>
+      <a href="mailto:joshisourabh47@gmail.com">Email</a>
+      <a href="https://github.com/Sourabhjoshi1" target="_blank">GitHub</a>
+      <a href="https://chessdepth.in" target="_blank">Chess Academy</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
+
