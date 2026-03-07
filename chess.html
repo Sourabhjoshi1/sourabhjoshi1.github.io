@@ -1,231 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chess | Sourabh Joshi</title>
-  <meta name="description" content="Chess, thinking, and writing – Sourabh Joshi" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chess | Sourabh Joshi</title>
+<meta name="description" content="Chess, thinking, and writing – Sourabh Joshi" />
 
-  <style>
-    :root {
-      --bg: #000000;
-      --fg: #f3f4f6;
-      --muted: #9ca3af;
-      --line: #1f2937;
-    }
+<style>
+:root {
+  --bg: #000000;
+  --fg: #f3f4f6;
+  --muted: #9ca3af;
+  --line: #1f2937;
+}
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      font-family: "Times New Roman", Georgia, serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.75;
-    }
+body {
+  font-family: "Times New Roman", Georgia, serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.75;
+}
 
-    header {
-      border-bottom: 1px solid var(--line);
-      padding: 1.2rem 1rem;
-    }
+header {
+  border-bottom: 1px solid var(--line);
+  padding: 1.2rem 1rem;
+}
 
-    .nav {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .nav h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
+.nav h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
 
-    .nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: var(--fg);
-      font-size: 0.95rem;
-    }
+.nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--fg);
+  font-size: 0.95rem;
+}
 
-    .nav a:hover { text-decoration: underline; }
+.nav a:hover { text-decoration: underline; }
 
-    main {
-      max-width: 760px;
-      margin: 4rem auto 6rem;
-      padding: 0 1rem;
-    }
+main {
+  max-width: 760px;
+  margin: 4rem auto 6rem;
+  padding: 0 1rem;
+}
 
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-    }
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
 
-    h3 {
-      font-size: 1.15rem;
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-    }
+h3 {
+  font-size: 1.15rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+}
 
-    p {
-      margin-bottom: 1.2rem;
-    }
+p {
+  margin-bottom: 1.2rem;
+}
 
-    ul {
-      margin-left: 1.2rem;
-      list-style: disc;
-    }
+ul {
+  margin-left: 1.2rem;
+  list-style: disc;
+}
 
-    li {
-      margin-bottom: 0.6rem;
-    }
+li {
+  margin-bottom: 0.6rem;
+}
 
-    .muted {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 
-    blockquote {
-      margin-top: 2.5rem;
-      padding-left: 1.2rem;
-      border-left: 2px solid var(--line);
-      color: var(--muted);
-      font-style: italic;
-    }
+blockquote {
+  margin-top: 2.5rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+  font-style: italic;
+}
 
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 3rem 1rem;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.9rem;
-    }
+/* Footer consistent with other pages */
 
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-      margin: 0 0.75rem;
-    }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 3rem 1rem;
+  margin-top: 5rem;
+}
 
-    footer a:hover { text-decoration: underline; }
-  </style>
+.footer-container {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="nav">
-    <h1>Sourabh Joshi</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="chess.html">Chess</a>
-      <a href="contact.html">Contact</a>
-      <a href="Sourabh_Joshi_CV.pdf">CV</a>
-    </nav>
-  </div>
+<div class="nav">
+<h1>Sourabh Joshi</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="research.html">Research</a>
+<a href="chess.html">Chess</a>
+<a href="contact.html">Contact</a>
+<a href="Sourabh_Joshi_CV.pdf">CV</a>
+</nav>
+</div>
 </header>
 
 <main>
-  <h2>Chess</h2>
 
-  <p>
-    Chess has been a long-standing part of my life, not merely as a competitive activity,
-    but as a discipline that shapes how I think, plan, and reason under uncertainty.
-  </p>
+<h2>Chess</h2>
 
-  <p>
-    I am a FIDE-rated chess player and coach. Over the years, chess has taught me the
-    importance of structure, patience, and the ability to evaluate complex positions
-    without complete information—skills that closely mirror the demands of research
-    and engineering.
-  </p>
+<p>
+Chess has been a long-standing part of my life, not merely as a competitive activity,
+but as a discipline that shapes how I think, plan, and reason under uncertainty.
+</p>
 
-  <p>
-    My approach to chess emphasizes long-term planning over short-term tactics, and
-    understanding over memorization. I am particularly interested in positional play,
-    gradual improvement, and the creation of small, persistent advantages.
-  </p>
+<p>
+I am a FIDE-rated chess player and coach. Over the years, chess has taught me the
+importance of structure, patience, and the ability to evaluate complex positions
+without complete information—skills that closely mirror the demands of research
+and engineering.
+</p>
 
-  <p>
-    As a coach, I focus on helping students develop independent thinking rather than
-    dependence on preparation or opening theory. The goal is not rapid improvement,
-    but durable understanding.
-  </p>
+<p>
+My approach to chess emphasizes long-term planning over short-term tactics, and
+understanding over memorization. I am particularly interested in positional play,
+gradual improvement, and the creation of small, persistent advantages.
+</p>
 
-  <h3>Selected Games</h3>
-  <p class="muted">
-    A small selection of games that I find instructive, either for their strategic ideas
-    or for the thinking process behind critical decisions.
-  </p>
+<p>
+As a coach, I focus on helping students develop independent thinking rather than
+dependence on preparation or opening theory. The goal is not rapid improvement,
+but durable understanding.
+</p>
 
-  <ul>
-    <li>
-      <strong>Sourabh Joshi – [Opponent]</strong><br />
-      <span class="muted">
-        A positional game illustrating long-term pressure and pawn-structure weaknesses.
-      </span>
-    </li>
+<h3>Selected Games</h3>
 
-    <li>
-      <strong>Sourabh Joshi – [Opponent]</strong><br />
-      <span class="muted">
-        An endgame-focused game emphasizing patience and conversion of small advantages.
-      </span>
-    </li>
+<p class="muted">
+A small selection of games that I find instructive, either for their strategic ideas
+or for the thinking process behind critical decisions.
+</p>
 
-    <li>
-      <strong>Sourabh Joshi – [Opponent]</strong><br />
-      <span class="muted">
-        A defensive game highlighting resilience and accurate evaluation under pressure.
-      </span>
-    </li>
-  </ul>
+<ul>
 
-  <h3>Chess Writing & Notes</h3>
-  <p>
-    I occasionally write short reflections and notes on chess, often connecting it to
-    broader themes such as learning, uncertainty, and decision-making. These writings
-    are informal and exploratory in nature.
-  </p>
+<li>
+<strong>Sourabh Joshi – [Opponent]</strong><br>
+<span class="muted">
+A positional game illustrating long-term pressure and pawn-structure weaknesses.
+</span>
+</li>
 
-  <ul>
-    <li>
-      <strong>Positional Pressure and Patience</strong><br />
-      <span class="muted">
-        Thoughts on maintaining tension and resisting premature action.
-      </span>
-    </li>
+<li>
+<strong>Sourabh Joshi – [Opponent]</strong><br>
+<span class="muted">
+An endgame-focused game emphasizing patience and conversion of small advantages.
+</span>
+</li>
 
-    <li>
-      <strong>Why Most Plans Fail</strong><br />
-      <span class="muted">
-        On flexibility, opponent resources, and overcommitment.
-      </span>
-    </li>
+<li>
+<strong>Sourabh Joshi – [Opponent]</strong><br>
+<span class="muted">
+A defensive game highlighting resilience and accurate evaluation under pressure.
+</span>
+</li>
 
-    <li>
-      <strong>Chess as a Model of Thought</strong><br />
-      <span class="muted">
-        Reflections on what chess teaches about reasoning under incomplete information.
-      </span>
-    </li>
-  </ul>
+</ul>
 
-  <blockquote>
-    “Chess is not about the next move alone, but about understanding the position you
-    are slowly becoming.”
-  </blockquote>
+<h3>Chess Writing & Notes</h3>
+
+<p>
+I occasionally write short reflections and notes on chess, often connecting it to
+broader themes such as learning, uncertainty, and decision-making. These writings
+are informal and exploratory in nature.
+</p>
+
+<ul>
+
+<li>
+<strong>Positional Pressure and Patience</strong><br>
+<span class="muted">
+Thoughts on maintaining tension and resisting premature action.
+</span>
+</li>
+
+<li>
+<strong>Why Most Plans Fail</strong><br>
+<span class="muted">
+On flexibility, opponent resources, and overcommitment.
+</span>
+</li>
+
+<li>
+<strong>Chess as a Model of Thought</strong><br>
+<span class="muted">
+Reflections on what chess teaches about reasoning under incomplete information.
+</span>
+</li>
+
+</ul>
+
+<blockquote>
+“Chess is not about the next move alone, but about understanding the position you are slowly becoming.”
+</blockquote>
+
 </main>
 
 <footer>
-  <p>I prefer email, but you may also find me elsewhere.</p>
-  <p>
-    <a href="mailto:joshisourabh47@gmail.com">Email</a> ·
-    <a href="https://github.com/Sourabhjoshi1" target="_blank">GitHub</a> 
-  </p>
-  <p style="margin-top:1.5rem;">© 2025 Sourabh Joshi</p>
+
+<div class="footer-container">
+
+<p class="footer-text">
+This website presents selected work, research interests, and academic activities.
+</p>
+
+<p class="footer-contact">
+Contact: joshisourabh47@gmail.com
+</p>
+
+<p class="footer-copy">
+© 2026 Sourabh Joshi
+</p>
+
+</div>
+
 </footer>
 
 </body>
